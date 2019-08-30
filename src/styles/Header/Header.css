@@ -85,10 +85,153 @@
         background-repeat: no-repeat;
     }
     .store-finder {
-        background: url(/src/assets/images/icons/body-shop-icons-thick_map.svg) 0 0 no-repeat;
+        background: url(../../assets/images/icons/body-shop-icons-thick_map.svg) 0 0 no-repeat;
         width: 17px;
+    }
+    .tbs-at-home {
+        background: url(../../assets/images/icons/body-shop-icons_tbs_at_home.svg) 0 0 no-repeat;
+        width: 25px;
+    }
+    .customer-care {
+        background: url(../../assets/images/icons/body-shop-icons-thick_help.svg) 0 0 no-repeat;
+        width: 24px;
     }
     .text-store-finder {
         padding: 0 0 0 6px;
+        font-family: openSansSemibold;
+        cursor: pointer;
     }
+    .ulStyle {
+        margin: 0;
+        padding: 0;
+    }
+    .headerUserGreeting {
+        text-overflow: ellipsis;
+        font-family: openSansSemibold;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 115px;
+    }
+    .my-account {
+        background: url(../../assets/images/icons/body-shop-icons-thick_sign_in.svg) 0 0 no-repeat;
+        width: 29px;
+    }
+    .wish-list {
+        background: url(../../assets/images/icons/body-shop-icons-thick_wishlist.svg) 0 0 no-repeat;
+        width: 31px;
+    }
+    .mini-basket {
+        background: url(../../assets/images/icons/body-shop-icons-thick_bag.svg) 0 0 no-repeat;
+        width: 24px;
+    }
+    .last {
+        padding: 0;
+    }
+    .basket-icon-circle {
+        display: block;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    background: #111;
+    color: #fff;
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    padding: 3px 5px 5px 6px;
+    text-align: center;
+    line-height: 15px;
+    border: 2px solid #fff;
+    z-index: 12;
+    font-size: 10px;
+    }
+    .main-navigation-desktop {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        z-index: 12;
+    }
+    .dynamic-area {
+        max-width: 1273px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: left;
+    }
+    .navigation-container {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .navigation-bar {
+        width: 76%;
+        display: inline-block;
+        margin: 5px 0 0 0;
+        padding: 0;
+        position: relative;
+    }
+    ul.main-nav {
+        text-align: justify;
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 38px;
+    }
+    .section:first-child {
+        text-align: left;
+    }
+    .section a.menuitem {
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 2px solid transparent;
+    }
+    .navigation-bar ul.main-nav li {
+        display: inline-block;
+        zoom: 1;
+        text-align: left;
+        letter-spacing: .0625em;
+        vertical-align: top;
+        font-size: 14px;
+    }
+    .main-navigation-desktop .section {
+        display: table-cell;
+        padding: 0;
+        font-size: 14px;
+        cursor: default;
+        text-align: center;
+    }
+    .main-navigation-desktop .section {
+        display: inline;
+        font-family: "InterstateBoldCond";
+        font-weight: 700;
+        padding: 0 20px;
+        font-size: 1.143em;
+        cursor: default;
+    }
+    .search-toggler {
+        text-align: right;
+        padding: 0;
+        margin: 0;
+        text-transform: none;
+        position: relative;
+        float: right;
+    }
+    .searchBoxStyle {
+        width:200px;
+        height:20px !important;
+        font-size: 13px;
+    }
+    .delivery-return-msg-desktop {
+        display: block;
+        position: relative;
+        margin: 45px 0 0 0;
+        padding: 3px 0;
+        background: #b9ca7d!important;
+        text-align: center;
+        width: 100%;
+        font-size: 12px;
+        min-height: 28px;
+    }
+    
+    
 }

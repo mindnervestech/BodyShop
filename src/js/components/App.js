@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect, withRouter } from 'react-router-dom';
-import Header from '../components/Common/Header/Header';
-import Footer from '../components/Common/Footer/Footer';
+import Header from '../components/common/Header/Header';
+import Footer from '../components/common/Footer/Footer';
 import { BASE_URL, CLONE_BASE_URL, API_TOKEN } from '../api/globals';
 import { connect } from 'react-redux';
 import * as actions from '../redux/actions/index'
@@ -37,8 +37,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: 'ar',
-      dir: 'rtl',
+      language: 'en',
+      dir: '',
       changeData: false,
       store_id: '',
       toHome: false,

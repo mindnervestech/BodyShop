@@ -1,8 +1,16 @@
 {
   "en": {
-    "home.Title": "Home Page"
+    "home.Title": "Home Page",
+    "header.stores": "Stores",
+    "header.theBodyShopAtHome": "The Body Shop At Home ™",
+    "header.customerCare": "Customer Care",
+    "header.hiThere": "Hi there"
   },
   "ar": {
-    "home.Title": "الصفحة الرئيسية"
+    "home.Title": "الصفحة الرئيسية",
+    "header.stores": "",
+    "header.theBodyShopAtHome": "",
+    "header.customerCare": "",
+    "header.hiThere": ""
   }
 }

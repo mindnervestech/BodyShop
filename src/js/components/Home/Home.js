@@ -5,9 +5,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <p >
+        {/* <p >
           <FormattedMessage id="home.Title" defaultMessage="Home Page" />
-        </p>
+        </p> */}
       </div>
     );
   }
