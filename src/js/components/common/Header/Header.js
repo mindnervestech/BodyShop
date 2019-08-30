@@ -12,27 +12,27 @@ class Header extends Component {
                     <div className="sticky-header-row">
                         <div className="sticky-header-col sticky-header-col-one">
                         <ul>
-                            <li class="content">
+                            <li className="content">
                                 <a href="/en-gb/store-finder" aria-label="Store finder">
-                                    <span class="icons store-finder"></span><span class="text-store-finder">Stores</span> 
+                                    <span className="icons store-finder"></span><span className="text-store-finder">Stores</span> 
                                 </a>
                             </li>
-                            <li class="content">
+                            <li className="content">
                                 <a href="">
-                                    <span class="icons tbs-at-home"></span>
-                                    <span class="text-tbs-at-home">The Body Shop At Home ™</span>
+                                    <span className="icons tbs-at-home"></span>
+                                    <span className="text-tbs-at-home">The Body Shop At Home ™</span>
                                 </a>
                             </li>
-                            <li class="content last customerCareLinkComponent">
+                            <li className="content last customerCareLinkComponent">
                                 <a id="customerCareIcon" href="">
-                                    <span class="icons customer-care"></span><span class="text-customer-care">Customer Care</span>
+                                    <span className="icons customer-care"></span><span className="text-customer-care">Customer Care</span>
                                 </a>
                             </li>
                         </ul>
                         </div>
                         <div className="sticky-header-col sticky-header-col-two">
                             <a className="logo">
-                                <img title="The Body Shop" src="https://assets.thebodyshop.com/medias/tbs-logo.svg?context=content-images/h4d/h7c/8796377514014/tbs-logo.svg" alt="The Body Shop" class="loading"/>
+                                <img title="The Body Shop" src="https://assets.thebodyshop.com/medias/tbs-logo.svg?context=content-images/h4d/h7c/8796377514014/tbs-logo.svg" alt="The Body Shop" className="loading"/>
                             </a>    
                         </div>
                         <div className="sticky-header-col sticky-header-col-three">
