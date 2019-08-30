@@ -1,0 +1,80 @@
+
+@media (min-width: 1025px) {
+    .sticky-header {
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        display: block;
+        position: relative;
+        border: 0;
+        z-index: 1000;
+    }
+    .wrapper-global-header-desktop {
+        margin: 15px 0 0 0;
+        padding: 0;
+        vertical-align: top;
+        text-align: center;
+        display: block;
+        font-family: Open Sans;
+        position: relative;
+    }
+    .sticky-header-row {
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        padding: 0 0 15px 0;
+        width: 100%;
+        vertical-align: top;
+    }
+    .sticky-header-col {
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+        text-align: left;
+        font-size: 12px;
+    }
+    .sticky-header-col-one {
+        width: 35%;
+        float: left;
+    }
+    .sticky-header-col-two {
+        width: 29.8%;
+        text-align: center;
+    }
+    .sticky-header-col-three {
+        width: 35%;
+        text-align: right;
+        float: right;
+        padding-right: 0;
+        border: 1px solid transparent;
+    }
+    .logo img {
+        width: 260px;
+        height: 24px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .content {
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        padding: 0 15px 0 0;
+    }
+    .icons {
+        height: 24px;
+        display: inline-block;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+    }
+    .store-finder {
+        background: url(/src/assets/images/icons/body-shop-icons-thick_map.svg) 0 0 no-repeat;
+        width: 17px;
+    }
+    .text-store-finder {
+        padding: 0 0 0 6px;
+    }
+}
