@@ -1,3 +1,17 @@
+.main {
+    background: #fff;
+    position: relative;
+}
+  
+.main-inner {
+    padding: 0 48px;
+    margin: 0 auto;
+    max-width: 1368px;
+}
+*, :after, :before {
+    color: #111;
+    box-sizing: inherit;
+}
 
 @media (min-width: 1025px) {
     .sticky-header {

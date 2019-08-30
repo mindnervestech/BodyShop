@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './js/components/common/Header/Header';
-import './App.css';
+import './styles/App.css';
 import Footer from './js/components/common/Footer/Footer';
 import Home from './js/components/common/Home/Home';
 

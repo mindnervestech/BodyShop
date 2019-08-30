@@ -1,0 +1,66 @@
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+    /* top: -10px;
+    bottom: 10px;
+    left: -185px; */
+    left: 15px;
+    top: 10px;
+    font-size: 12px;
+    opacity: 1;
+    color: #007933;
+}
+
+input {
+    border: 1px solid #D5D5D5;
+    color: #7D7D7D;
+    height: 41.5px;
+}
+
+input:focus,
+input:not(:focus):valid {
+    height: 49.5px;
+    padding: 10px 0px 0px 15px;
+}
+
+input:focus {
+    border: 1px solid #007933;
+}
+
+input:valid {
+    border: 1px solid #D5D5D5;
+}
+
+.inputText {
+    font-size: 14px;
+    height: 41.5px;
+    padding: 16px 0px 23px 14px;
+    border: #D5D5D5 solid 1px;
+    color: #7d7d7d;
+    font-family: openSansRegular;
+    position: relative;
+    top: 7px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.floating-label {
+    font-size: 14px;
+    /* position: relative; */
+    font-family: openSansRegular;
+    pointer-events: none;
+    left: 20px;
+    top: 17px;
+    position: absolute;
+    /* left: -180px;
+    top: 10px; */
+    color: #7D7D7D;
+    transition: 0.2s ease all;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
