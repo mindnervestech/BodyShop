@@ -1,0 +1,146 @@
+
+.footer-region-1
+{
+padding: 0 48px;
+margin: 0 auto;
+max-width: 1368px;
+}
+
+.footer-region-2
+{
+ margin-left : 30px;   
+}
+
+@media (min-width: 1025px) {
+    .sticky-footer {
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        display: block;
+        position: relative;
+        border: 0;
+        z-index: 1000;
+        background: #f7f7f7;
+    }
+}
+
+.footer-text
+{ letter-spacing: 1px;
+    font-weight: 400;
+ font-family: InterstateRegularCondensed;
+ font-size: 14px;
+ line-height: 70px;
+ text-align: right;
+}
+
+
+.footer-text-2
+{
+    font-weight: 400;
+ font-family: InterstateRegularCondensed;
+ font-size: 14px;
+ line-height: 26px;
+}
+
+.footer-text-3
+{text-transform: uppercase;
+ font-weight: 400;
+ font-family: InterstateRegularCondensed;
+ font-size: 14px;
+ line-height: 22px;
+}
+
+.footer-text-4
+{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: InterstateRegularCondensed;
+    font-size: 12px;
+    line-height: 22px;
+    color: #7d7d7d;
+}
+
+.footer-btn {
+    height: 48px;
+    background-color: transparent;
+    border: #484848 solid 2px;
+    color: #111111;
+    font-family: interstateBold;
+    line-height: 15px;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  .footer-btn:hover {
+    background-color: #111111;
+    /*height: 66px;*/
+    color: #f7f7f7;
+  }
+
+  
+.footer-btn-live {
+    height: 50px;
+    width: 125px;
+    background: url('D:/dev/BodyShop/Workspace/BodyShop/src/assets/Footer Icon/bshead2.png');
+    border: #484848 solid 2px;
+    color: #111111;
+    font-family: interstateBold;
+    line-height: 15px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    background-size: 100%;
+  }
+  .footer-btn-live:hover {
+    background: url('D:/dev/BodyShop/Workspace/BodyShop/src/assets/Footer Icon/bshead1.png');
+    /*height: 66px;*/
+    color: #f7f7f7;
+  }
+.list{
+    padding: 0 !important;
+    list-style: none;
+}
+
+.list-heading
+{
+    font-size: 15px;
+    line-height: 40px;
+}
+
+.footericons {
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+}
+
+.footer-links
+{
+    color: #111111;
+}
+.footer-links:hover
+{   color: #111111;
+    cursor: pointer;
+    border-bottom: #111111 2px solid;    
+    text-decoration:none;
+}
+
+.underline
+{
+    color: #111111;
+    text-decoration: underline #111111
+}
+.nopadding
+{   
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.live-link
+{
+    color: #111111 !important;
+    text-decoration: underline #111111;
+}
+.live-link:hover
+{
+    cursor: pointer;
+}
