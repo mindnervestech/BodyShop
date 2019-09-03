@@ -8,22 +8,32 @@
     margin: 0 auto;
     max-width: 1368px;
 }
-*, :after, :before {
+/* *, :after, :before {
     color: #111;
     box-sizing: inherit;
-}
+} */
+
+/* .scroll-to-fixed-fixed {
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    margin-left: 0px;
+    width: 1167px;
+    left: 48px;
+} */
 
 @media (min-width: 1025px) {
     .sticky-header {
         background-color: #fff;
         top: 0;
-        left: 0;
-        margin: 0;
         padding: 0;
         display: block;
-        position: relative;
+        position: fixed;
         border: 0;
         z-index: 1000;
+        width: 100%;
+        padding-right: 96px;
+        padding-bottom: 11px;
     }
     .wrapper-global-header-desktop {
         margin: 15px 0 0 0;
@@ -31,7 +41,6 @@
         vertical-align: top;
         text-align: center;
         display: block;
-        font-family: Open Sans;
         position: relative;
     }
     .sticky-header-row {
@@ -130,8 +139,8 @@
     .basket-icon-circle {
         display: block;
     border-radius: 50%;
-    width: 13px;
-    height: 13px;
+    width: auto;
+    height: 24px;
     background: #111;
     color: #fff;
     position: absolute;
@@ -143,6 +152,7 @@
     border: 2px solid #fff;
     z-index: 12;
     font-size: 10px;
+    font-family: openSansSemibold;
     }
     .main-navigation-desktop {
         position: absolute;
@@ -184,6 +194,10 @@
         text-decoration: none;
         padding-bottom: 3px;
         border-bottom: 2px solid transparent;
+        cursor: pointer;
+    }
+    .section a.menuitem: hover {
+        border-bottom: 2px solid #111111;
     }
     .navigation-bar ul.main-nav li {
         display: inline-block;
@@ -230,8 +244,17 @@
         text-align: center;
         width: 100%;
         font-size: 12px;
-        min-height: 28px;
+        line-height: 22px;
+        font-family: openSansSemibold;
+        color: black;
     }
     
-    
+    .main-navigation-desktop-bg {
+        position: absolute;
+        top: 55px;
+        left: 0;
+    }
+    .subcategories-container {
+        width:100%;
+    }
 }

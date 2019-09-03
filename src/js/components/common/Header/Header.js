@@ -5,11 +5,26 @@ import '../../../../styles/Header/Header.css';
 import Input from '../../common/InputBox/Input.js';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        }
+      }
+
+      componentDidMount() {
+          
+      }
+
+      openSection() {
+          console.log('on mouse over...');
+      }
+
   render() {
     return (
         <div className="main">
             <div className="main-inner">
-                <div className="sticky-header">
+                <div className="sticky-header scroll-to-fixed-fixed">
                     <header className="wrapper-global-header-desktop"></header>
                     <div className="sticky-header-row">
                         <div className="sticky-header-col sticky-header-col-one">
@@ -65,49 +80,55 @@ class Header extends Component {
                                 <nav className="navigation-bar">
                                     <ul className="main-nav ulStyle">
                                         <li className="section" style={{paddingLeft:0}}>
-                                            <a className="menuitem">TRENDING</a>
+                                            <a className="menuitem" onMouseOver={this.openSection}><FormattedMessage id="header.menu.trending" /></a>
+                                            <div className="main-navigation-desktop-bg">
+                                                <div className="section-categories">
+                                                    <div className="subcategories-container">
+
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">FACE</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.face" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">BODY</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.body" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">HAIR</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.hair" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">MAKE UP</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.makeup" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">FRAGRANCE</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.fragrance" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">GIFTS</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.gifts" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">RANGE</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.range" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">TIPS & ADVICE</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.tipsAdvice" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">ABOUT US</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.aboutUs" /></a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
-                    <div className="search-toggler">
+                    {/* <div className="search-toggler">
                             <input type="text" className="searchBoxStyle" />
                        
-                    </div>
-                    <p class="delivery-return-msg-desktop">3 for 2* use code: 19820 &nbsp;&nbsp; |&nbsp;&nbsp;  Free delivery over £25*</p>
+                    </div> */}
+                    <p class="delivery-return-msg-desktop">Enjoy free delivery over £25*</p>
                 </div>
             </div>
         </div>
-      
     );
   }
 }

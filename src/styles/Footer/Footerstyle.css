@@ -19,7 +19,6 @@ max-width: 1368px;
         display: block;
         position: relative;
         border: 0;
-        z-index: 1000;
         background: #f7f7f7;
 }
 
@@ -80,7 +79,7 @@ max-width: 1368px;
 .footer-btn-live {
     height: 50px;
     width: 125px;
-    background: url('D:/dev/BodyShop/Workspace/BodyShop/src/assets/Footer Icon/bshead2.png');
+    background: url('../../assets/Footer Icon/bshead2.png');
     border: #484848 solid 2px;
     color: #111111;
     font-family: interstateBold;
@@ -90,7 +89,7 @@ max-width: 1368px;
     background-size: 100%;
   }
   .footer-btn-live:hover {
-    background: url('D:/dev/BodyShop/Workspace/BodyShop/src/assets/Footer Icon/bshead1.png');
+    background: url('../../assets/Footer Icon/bshead1.png');
     /*height: 66px;*/
     color: #f7f7f7;
   }
