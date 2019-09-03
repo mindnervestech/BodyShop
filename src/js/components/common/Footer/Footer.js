@@ -10,55 +10,62 @@ import facebook from '../../../../assets/Footer Icon/icon-facebook.svg'
 import instagram from '../../../../assets/Footer Icon/InstagramLogov4.webp'
 
 class Footer extends Component {
+
+
+  
   render() {
     return (
       <div className="footer-region-1">
         <div className="sticky-footer">
           <div className="row">
               <div className="col-md-3 row nopadding">
-                <div className ="col-md-6" />
-                <div className="col-md-10 footer-text">
+                <div className ="col-md-6 nopadding" />
+                <div className="col-md-6 footer-text nopadding centre">
                   <span><FormattedMessage id="footer.joinus" defaultmessage="JOIN US ON SOCIAL" /></span>
                 </div>
               
               </div>
          <div className="col-md-4 footer-text row nopadding">
-            <div className="col-md-1 nopadding" />
-            <div className="col-md-2 nopadding">
+            <div className="col-md-2 nopadding centre" />
+            <div className="col-md-1 nopadding centre">
               <a href ="aaa">
                 <img src ={twitter} className="footericons"/>
               </a>
             </div>
-            <div className="col-md-2 nopadding">
+            <div className="col-md-1 nopadding" />
+            <div className="col-md-1 nopadding centre">
               <a href ="aaa">
                 <img src ={youtube} className="footericons"/>
               </a>
             </div>
-            <div className="col-md-2 nopadding">
+            <div className="col-md-1 nopadding" />
+            <div className="col-md-1 nopadding centre">
               <a href ="aaa">
                 <img src ={snapchat} className="footericons"/>
               </a>
             </div>
-            <div className="col-md-2 nopadding">
+            <div className="col-md-1 nopadding" />
+            <div className="col-md-1 nopadding centre">
               <a href ="aaa">
                 <img src ={facebook} className="footericons"/>
               </a>
             </div>
-            <div className="col-md-2 nopadding">
+            <div className="col-md-1 nopadding" />
+            <div className="col-md-1 nopadding centre">
               <a href ="aaa">
                 <img src ={instagram} className="footericons"/>
               </a>
             </div>
         </div>
         <div className="col-md-4 nopadding">
-        <div className="footer-text">
+        <div className="footer-text centre">
           <button className="footer-btn"><FormattedMessage id="footer.signup" defaultmessage="SIGN UP FOR OUR EXCLUSIVE OFFERS" /></button>
         </div>
         </div>
       </div>
     </div>
     <br />
-    <div className="footer-region-2 row">
+    <div className="footer-region-2 row nopadding tab">
     <div className ="col-md-1 nopadding" />
     <div className = "col-md-11 row nopadding">
       <div className="col-md-3 nopadding">
@@ -107,7 +114,7 @@ class Footer extends Component {
       </div>
     </div>  
   </div>
-  <div className="footer-region-2 row">
+  <div className="footer-region-2 row nopadding tab">
     <div className ="col-md-1 nopadding" />
     <div className = "col-md-11 row">
       <div className="col-md-9 footer-text-3 nopadding">
@@ -124,6 +131,17 @@ class Footer extends Component {
         <p className="footer-text-4 nopadding">
           <FormattedMessage id="footer.trademark2" defaultmessage=" Registered Office: Watersmead, Littlehampton, West Sussex, BN17 6LS, United Kingdom; Registered in England No. 1284170" />
         </p>
+      </div>
+      <div className="col-md-3 nopadding">
+       <div>
+         <select className="dropdown">
+           <option value="SAUDI">SAUDI</option>
+           <option value="DUBAI">DUBAI</option>
+           <option value="KUWAIT">KUWAIT</option>
+           <option value="IRAN">IRAN</option>
+           
+         </select>
+       </div>
       </div>
     </div>
   </div>  

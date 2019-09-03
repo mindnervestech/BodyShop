@@ -11,8 +11,7 @@ max-width: 1368px;
  margin-left : 30px;   
 }
 
-@media (min-width: 1025px) {
-    .sticky-footer {
+.sticky-footer {
         top: 0;
         left: 0;
         margin: 0;
@@ -22,8 +21,8 @@ max-width: 1368px;
         border: 0;
         z-index: 1000;
         background: #f7f7f7;
-    }
 }
+
 
 .footer-text
 { letter-spacing: 1px;
@@ -132,7 +131,7 @@ max-width: 1368px;
 .nopadding
 {   
     padding: 0 !important;
-    margin: 0 !important;
+    margin: 0 !important;    
 }
 
 .live-link
@@ -143,4 +142,26 @@ max-width: 1368px;
 .live-link:hover
 {
     cursor: pointer;
+}
+
+.centre
+{
+    text-align: center;
+}
+
+@media(max-width:770px)
+{
+    .tab{
+        text-align: center
+    }
+}
+
+.dropdown
+{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-family: InterstateRegularCondensed;
+    border: none;
+    width: 30%;
 }
