@@ -11,6 +11,8 @@ import '../../styles/App.css';
 
 import { Route, Link, Switch } from 'react-router-dom'
 import Home from './Home/Home';
+import Login from './Login/Login';
+import Register from './Register/Register';
 
 //import StoreLocator from './StoreLocator/store-locator';
 import { BrowserRouter } from 'react-router-dom';
@@ -278,6 +280,8 @@ class App extends Component {
                   <Header handleLanguageSelection={this.handleLanguageSelection} handleCountrySelection={this.handleCountrySelection} />
                   <Switch>
                     <Route path="/home" component={Home} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/register" component={Register} />
                     <Route exact path="/" component={Home} />
                   </Switch>
                   <Footer />

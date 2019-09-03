@@ -306,12 +306,14 @@ h4 {
 }
 .btn-primary:hover {
   background-color: #2D2D2D;
-  height: 66px;
-  color: #FAFAFA;
+  /*height: 66px;*/
+  height: 48px;
+ /* color: #FAFAFA;*/
 }
 .btn-secondary:hover {
   background-color: #111111;
-  height: 66px;
+  /*height: 66px;*/
+  height: 48px;
   color: #FFFFFF;
 }
 .btn-primary-disabled {
@@ -600,6 +602,17 @@ h4 {
   width: 22px;
 }
 
+
+.btn-grey {
+  height: 48px;
+  background-color: #7d7d7d;
+  border: #7d7d7d solid 2px;
+  color: #FFFFFF;
+  font-family: InterstateBoldCond;
+  line-height: 15px;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
 @media(max-width: 767px) {
   .primary-accordian, .primary-accordian0-selected {
       line-height: 22px;
