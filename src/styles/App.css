@@ -302,12 +302,12 @@ h4 {
 }
 .btn-primary:hover {
   background-color: #2D2D2D;
-  height: 66px;
+  /*height: 66px;*/
   color: #FAFAFA;
 }
 .btn-secondary:hover {
   background-color: #111111;
-  height: 66px;
+  /*height: 66px;*/
   color: #FFFFFF;
 }
 .btn-primary-disabled {
