@@ -222,6 +222,14 @@
         font-size: 1.143em;
         cursor: default;
     }
+    .main-navigation-desktop .section a.menuitem {
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 2px solid transparent;
+    }
+    .main-navigation-desktop .section a.menuitem:hover {
+        border-bottom: 2px solid #111;
+    }
     .search-toggler {
         text-align: right;
         padding: 0;
@@ -251,10 +259,90 @@
     
     .main-navigation-desktop-bg {
         position: absolute;
-        top: 55px;
         left: 0;
+        top: 35px;
+        width: 120.7%;
+        border-right: 1px solid #e1e1e1;
+        background: #f7f7f7;
+        box-shadow: 0 6px 7px -3px rgba(0,0,0,.6);
+        height: auto;
+        padding-bottom: 24px;
+    }
+    .section-categories {
+        
+    }
+    .section-subcategories {
+        display: block;
+        border-top: 0 solid #e1e1e1;
+        padding: 24px 0;
+        max-width: 884px;
+        margin: 0 auto;
     }
     .subcategories-container {
         width:100%;
     }
+    .subcategories-col {
+        float: left;
+        width: 65%;
+    }
+    .category-column {
+        width: 33%;
+        float: left;
+        padding: 0 1%;
+    }
+    .subcategory a:first-child {
+        padding-top: 0;
+    }
+    .subcategory-link {
+        font-weight: 700;
+        text-decoration: none;
+        padding-bottom: 3px;
+        display: block;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+    .subcategory-item-title {
+        color: #2d2d2d;
+        font-size: 12px;
+        font-family: openSansSemibold;
+        text-decoration: none;
+        padding-bottom: 3px;
+        display: block;
+        text-transform: none;
+        font-weight: 400;
+        overflow: hidden;
+        width: 100%;
+    }
+    .banners-col {
+        float: right;
+        width: 35%;
+    }
+    .banners {
+        display: block;
+        width: 100%;
+        position: initial;
+        overflow: hidden;
+        font-family: "Interstate Black Cond";
+        font-weight: 400;
+        letter-spacing: .5px;
+    }
+    .banner-link {
+        padding-bottom: 3px;
+        text-decoration: none;
+        font-size: 1.143em;
+        line-height: 1em;
+        display: block;
+    }
+    .banners img {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .main-navigation-desktop-bg {
+        width: 121.6%;
+    }
+
 }
