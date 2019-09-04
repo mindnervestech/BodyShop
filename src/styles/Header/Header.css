@@ -8,22 +8,32 @@
     margin: 0 auto;
     max-width: 1368px;
 }
-*, :after, :before {
+/* *, :after, :before {
     color: #111;
     box-sizing: inherit;
-}
+} */
+
+/* .scroll-to-fixed-fixed {
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    margin-left: 0px;
+    width: 1167px;
+    left: 48px;
+} */
 
 @media (min-width: 1025px) {
     .sticky-header {
         background-color: #fff;
         top: 0;
-        left: 0;
-        margin: 0;
         padding: 0;
         display: block;
-        position: relative;
+        position: fixed;
         border: 0;
         z-index: 1000;
+        width: 100%;
+        padding-right: 96px;
+        padding-bottom: 11px;
     }
     .wrapper-global-header-desktop {
         margin: 15px 0 0 0;
@@ -31,7 +41,6 @@
         vertical-align: top;
         text-align: center;
         display: block;
-        font-family: Open Sans;
         position: relative;
     }
     .sticky-header-row {
@@ -130,8 +139,8 @@
     .basket-icon-circle {
         display: block;
     border-radius: 50%;
-    width: 13px;
-    height: 13px;
+    width: auto;
+    height: 24px;
     background: #111;
     color: #fff;
     position: absolute;
@@ -143,6 +152,7 @@
     border: 2px solid #fff;
     z-index: 12;
     font-size: 10px;
+    font-family: openSansSemibold;
     }
     .main-navigation-desktop {
         position: absolute;
@@ -184,6 +194,10 @@
         text-decoration: none;
         padding-bottom: 3px;
         border-bottom: 2px solid transparent;
+        cursor: pointer;
+    }
+    .section a.menuitem: hover {
+        border-bottom: 2px solid #111111;
     }
     .navigation-bar ul.main-nav li {
         display: inline-block;
@@ -208,6 +222,14 @@
         font-size: 1.143em;
         cursor: default;
     }
+    .main-navigation-desktop .section a.menuitem {
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 2px solid transparent;
+    }
+    .main-navigation-desktop .section a.menuitem:hover {
+        border-bottom: 2px solid #111;
+    }
     .search-toggler {
         text-align: right;
         padding: 0;
@@ -230,8 +252,97 @@
         text-align: center;
         width: 100%;
         font-size: 12px;
-        min-height: 28px;
+        line-height: 22px;
+        font-family: openSansSemibold;
+        color: black;
     }
     
-    
+    .main-navigation-desktop-bg {
+        position: absolute;
+        left: 0;
+        top: 35px;
+        width: 120.7%;
+        border-right: 1px solid #e1e1e1;
+        background: #f7f7f7;
+        box-shadow: 0 6px 7px -3px rgba(0,0,0,.6);
+        height: auto;
+        padding-bottom: 24px;
+    }
+    .section-categories {
+        
+    }
+    .section-subcategories {
+        display: block;
+        border-top: 0 solid #e1e1e1;
+        padding: 24px 0;
+        max-width: 884px;
+        margin: 0 auto;
+    }
+    .subcategories-container {
+        width:100%;
+    }
+    .subcategories-col {
+        float: left;
+        width: 65%;
+    }
+    .category-column {
+        width: 33%;
+        float: left;
+        padding: 0 1%;
+    }
+    .subcategory a:first-child {
+        padding-top: 0;
+    }
+    .subcategory-link {
+        font-weight: 700;
+        text-decoration: none;
+        padding-bottom: 3px;
+        display: block;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+    .subcategory-item-title {
+        color: #2d2d2d;
+        font-size: 12px;
+        font-family: openSansSemibold;
+        text-decoration: none;
+        padding-bottom: 3px;
+        display: block;
+        text-transform: none;
+        font-weight: 400;
+        overflow: hidden;
+        width: 100%;
+    }
+    .banners-col {
+        float: right;
+        width: 35%;
+    }
+    .banners {
+        display: block;
+        width: 100%;
+        position: initial;
+        overflow: hidden;
+        font-family: "Interstate Black Cond";
+        font-weight: 400;
+        letter-spacing: .5px;
+    }
+    .banner-link {
+        padding-bottom: 3px;
+        text-decoration: none;
+        font-size: 1.143em;
+        line-height: 1em;
+        display: block;
+    }
+    .banners img {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .main-navigation-desktop-bg {
+        width: 121.6%;
+    }
+
 }

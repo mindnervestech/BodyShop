@@ -64,9 +64,6 @@ class Home extends Component {
        };
       
     return (
-        /* <p >
-          <FormattedMessage id="home.Title" defaultMessage="Home Page" />
-        </p> */
       <div className="home-main">
         <div>
          <Slider {...settings}> 
@@ -98,7 +95,7 @@ class Home extends Component {
         </div>
         <br />
         <div>
-          <TextOnRight heading={<FormattedMessage id="home.loveBody" defaultmessage="LOVE YOUR BODY™ CLUB" />} text={<FormattedMessage id="home.statictext1" />} text2={<FormattedMessage id="home.statictext2" />} imageSrc={staticimg1} />
+          <TextOnRight heading={<FormattedMessage id="home.loveBody" defaultmessage="LOVE YOUR BODYï¿½ CLUB" />} text={<FormattedMessage id="home.statictext1" />} text2={<FormattedMessage id="home.statictext2" />} imageSrc={staticimg1} />
         </div>
         <br />
         <div className="text-align-center">

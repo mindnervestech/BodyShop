@@ -5,6 +5,16 @@
     "header.theBodyShopAtHome": "The Body Shop At Home ™",
     "header.customerCare": "Customer Care",
     "header.hiThere": "Hi there",
+    "header.menu.trending": "TRENDING",
+    "header.menu.face": "FACE",
+    "header.menu.body": "BODY",
+    "header.menu.hair": "HAIR",
+    "header.menu.makeup": "MAKEUP",
+    "header.menu.fragrance": "FRAGRANCE",
+    "header.menu.gifts": "GIFTS",
+    "header.menu.range": "RANGE",
+    "header.menu.tipsAdvice": "TIPS & ADVICE",
+    "header.menu.aboutUs": "ABOUT US",
 
     "footer.joinus": "JOIN US ON SOCIAL",
     "footer.signup": "SIGN UP FOR OUR EXCLUSIVE OFFERS",
@@ -51,13 +61,22 @@
     "home.readMore": "READ MORE"
 
   },
-
   "ar": {
     "home.Title": "الصفحة الرئيسية",
     "header.stores": "",
     "header.theBodyShopAtHome": "",
     "header.customerCare": "",
     "header.hiThere": "",
+    "header.menu.trending": "",
+    "header.menu.face": "",
+    "header.menu.body": "",
+    "header.menu.hair": "",
+    "header.menu.makeup": "",
+    "header.menu.fragrance": "",
+    "header.menu.gifts": "",
+    "header.menu.range": "",
+    "header.menu.TipsAdvice": "",
+    "header.menu.aboutUs": "",
 
     "footer.joinus": "",
     "footer.signup": "",
@@ -91,8 +110,6 @@
     "footer.trademark2": "",
     "footer.live": "",
     "footer.time": "",
-
-
     "home.bestseller": "",
     "home.statictext1": "",
     "home.statictext2": "",
