@@ -16,14 +16,14 @@
     padding: 24px 0;
 }
 
-a {
+.register-info {
 	color: black;
 	background-color: transparent;
 	text-decoration: underline;
 	font-weight: bold;
 }
 
-a:hover {
+.register-link a:hover {
 	color: black;
 	background-color: transparent;
 	text-decoration: underline;

@@ -42,10 +42,10 @@ class Register extends Component {
                                      <Row>
                                         <Col md="1"></Col>
                                         <Col md="4" className="pt-2">
-                                             <Button color="secondary" size="md" block>LOGIN</Button>
+                                            <a href="/login"><Button color="primary" size="md" block>LOGIN</Button></a>
                                         </Col>
                                         <Col md="4" className="pt-2">
-                                             <Button color="primary" size="md" block>REGISTER</Button>
+                                             <a href="/register"><Button color="secondary" size="md" block>REGISTER</Button></a>
                                         </Col>
                                         <Col md="2"></Col>
                                       </Row>
@@ -106,7 +106,7 @@ class Register extends Component {
 														<FormGroup>
 															<CustomInput type="checkbox" id="registerCheckout" name="checkout" label="YES, I WANT TO JOIN" />
 															<Label for="registerCheckoutLabel">
-																<p>
+																<p className="register-info">
 																	Tick to confirm that you are over the age of 16 and that you have read and agreed to the Love Your Body™ Club <a href="#">Terms and Conditions.</a>
 																</p>
 															</Label>
@@ -221,7 +221,7 @@ class Register extends Component {
 													<Col md="4">
 														<FormGroup>															
 															<Label for="registerUpdateLabel" className="pt-4">
-																<p>
+																<p className="register-info">
 																	Yes, please sign me up for exclusive news, updates and offers from The Body Shop by
 																</p>
 															</Label>
@@ -254,8 +254,8 @@ class Register extends Component {
 										        		<FormGroup>
 															<CustomInput className="pt-2" type="checkbox" id="registertncCheckbox" name="tnc" >
 															<Label for="registerCheckoutLabel">
-																<p>
-																		I confirm that I am over the age of 16 and have read and agreed to the <a href="#">Terms of Service</a> 
+																<p className="register-info">
+																		I confirm that I am over the age of 16 and have read and agreed to the <a className="register-info" href="#">Terms of Service</a> 
 																</p>
 															</Label>
 															</CustomInput>
@@ -277,9 +277,9 @@ class Register extends Component {
 										        <Row>
 										        	<Col md="4"></Col>
 													<Col md="2"></Col>
-										        	<Col md="4">
+										        	<Col md="4" className="register-link">
 										        		<span>
-										        			We will use your information to manage your account and requests and for research and analytics. We may share your information with trusted parties acting on our behalf and other The Body Shop companies. For further information on how we treat your personal information, please see our <a href="#">Privacy Notice</a> 
+										        			We will use your information to manage your account and requests and for research and analytics. We may share your information with trusted parties acting on our behalf and other The Body Shop companies. For further information on how we treat your personal information, please see our <a className="register-info" href="#">Privacy Notice</a> 
 										        		</span>
 										        	</Col>
 										        </Row>

@@ -41,6 +41,13 @@ input {
 	width: 75% !important;
 }
 
-p,a {
+.register-info {
 	font-size: 14px !important;
 }
+
+.register-link a:hover {
+	color: black;
+	background-color: transparent;
+	text-decoration: underline;
+}
+

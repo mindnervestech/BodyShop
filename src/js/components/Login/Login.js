@@ -65,10 +65,10 @@ import "./Login.css";
                                            <Row>
                                                 <Col md="1"></Col>
                                                 <Col md="4" className="pt-2">
-                                                     <Button color="primary" size="md" block>LOGIN</Button>
+                                                      <a href="/login"><Button color="primary" size="md" block>LOGIN</Button></a>
                                                 </Col>
                                                 <Col md="4" className="pt-2">
-                                                     <Button color="secondary" size="md" block>REGISTER</Button>
+                                                      <a href="/register"><Button color="primary" size="md" block>REGISTER</Button></a>
                                                 </Col>
                                                 <Col md="2"></Col>
                                            </Row>
@@ -100,7 +100,7 @@ import "./Login.css";
 
                                                     <Row>
                                                         <Col md="2"></Col>
-                                                        <Col md="6"><a href="#">Forgot your password?</a></Col>
+                                                        <Col md="6" className="register-link"><a  className="register-info" href="#">Forgot your password?</a></Col>
                                                     </Row>
 
                                             <FormGroup>
@@ -115,7 +115,7 @@ import "./Login.css";
 
                                              <Row>
                                                     <Col md="3"></Col>
-                                                    <Col md="6"><span>Not registered yet?</span><a href="#">Register now</a></Col>
+                                                    <Col md="6" className="register-link"><span>Not registered yet?</span><a className="register-info" href="/register">Register now</a></Col>
                                                </Row>
                                         </Form>                      
                                     </Col>
