@@ -65,7 +65,7 @@ import "./Login.css";
                                            <Row>
                                                 <Col md="1"></Col>
                                                 <Col md="4" className="pt-2">
-                                                      <a href="/login"><Button color="primary" size="md" block>LOGIN</Button></a>
+                                                      <a href="/login"><Button color="secondary" size="md" block>LOGIN</Button></a>
                                                 </Col>
                                                 <Col md="4" className="pt-2">
                                                       <a href="/register"><Button color="primary" size="md" block>REGISTER</Button></a>
