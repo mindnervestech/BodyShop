@@ -31,6 +31,10 @@
   text-align: center;
 }
 
+.display-inline {
+  display: inline-block
+}
+
 .h1-hero-header {
   font-weight: 400;
   font-family: interstateBlackCond;
@@ -434,7 +438,9 @@ h4 {
   letter-spacing: 1px;
   font-size: 14px;
 }
-.primary-tab-normal .secondary-tab-normal .anchor-tab-normal {
+.primary-tab-normal,
+.secondary-tab-normal,
+.anchor-tab-normal {
   height: 66px;
   background-color: #E1E1E1;
   border: #E1E1E1 solid 2px;
@@ -446,7 +452,7 @@ h4 {
   letter-spacing: 1px;
   font-size: 14px;
 }
-.primary-tab-normal:hover .secondary-tab-normal:hover .anchor-tab-normal:hover {
+.primary-tab-normal:hover, .secondary-tab-normal:hover, .anchor-tab-normal:hover {
   height: 66px;
   background-color: #d1d1d1;
   border: #d1d1d1 solid 2px;
@@ -511,7 +517,7 @@ h4 {
   font-size: 14px;
 }
 
-.filter-btn:hover .filter-btn-option:hover .filter-drawer:hover .filter-drawer-secondary:hover {
+.filter-btn:hover, .filter-btn-option:hover, .filter-drawer:hover, .filter-drawer-secondary:hover {
   background-color: #d1d1d1;
 }
 .filter-btn-option {
@@ -579,7 +585,7 @@ h4 {
   outline: 2px solid #d1d1d1;
   fill: #f7f7f7;
 }
-.radio-btn-box:hover .radio-btn:hover {
+.radio-btn-box:hover, .radio-btn:hover {
   fill: #ffffff;
   outline: 2px solid #111111;
 }
@@ -595,7 +601,7 @@ h4 {
 }
 
 @media(max-width: 767px) {
-  .primary-accordian .primary-accordian0-selected {
+  .primary-accordian, .primary-accordian0-selected {
       line-height: 22px;
       font-size: 24px;
   }

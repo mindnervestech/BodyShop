@@ -37,10 +37,14 @@
     "footer.trademark1": "® A registered trademark of The Body Shop International Limited; A trademark of The Body Shop International Limited All rights reserved.",
     "footer.trademark2": " Registered Office: Watersmead, Littlehampton, West Sussex, BN17 6LS, United Kingdom; Registered in England No. 1284170",
     "footer.live": "LIVE CHAT",
+<<<<<<< HEAD
     "footer.time": "MON TO SAT: 9AM - 9PM",
     
     
     "home.bestseller": "BESTSELLER"
+=======
+    "footer.time": "MON TO SAT: 9AM - 9PM"
+>>>>>>> 83c5c94ff8eee89bc3d321cb8256d7ff84dd7e36
   },
 
   "ar": {
@@ -81,9 +85,14 @@
     "footer.trademark1": "",
     "footer.trademark2": "",
     "footer.live": "",
+<<<<<<< HEAD
     "footer.time": "",
 
     
     "home.bestseller": ""
+=======
+    "footer.time": ""
+
+>>>>>>> 83c5c94ff8eee89bc3d321cb8256d7ff84dd7e36
   }
 }
