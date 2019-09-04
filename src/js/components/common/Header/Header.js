@@ -5,11 +5,38 @@ import '../../../../styles/Header/Header.css';
 import Input from '../../common/InputBox/Input.js';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        }
+      }
+
+      componentDidMount() {
+          
+      }
+
+      openSection(menuName) {
+          if(menuName == 'trending') {
+              document.getElementById('trending-section').style.display = 'block';
+              document.getElementById('face-section').style.display = 'none';
+          }
+          if(menuName == 'face') {
+            document.getElementById('face-section').style.display = 'block';
+            document.getElementById('trending-section').style.display = 'none';
+        }
+      }
+
+      closeSection() {
+            document.getElementById('trending-section').style.display = 'none';
+            document.getElementById('face-section').style.display = 'none';
+    }
+
   render() {
     return (
         <div className="main">
             <div className="main-inner">
-                <div className="sticky-header">
+                <div className="sticky-header scroll-to-fixed-fixed">
                     <header className="wrapper-global-header-desktop"></header>
                     <div className="sticky-header-row">
                         <div className="sticky-header-col sticky-header-col-one">
@@ -63,51 +90,227 @@ class Header extends Component {
                         <div className="dynamic-area">
                             <div className="navigation-container">
                                 <nav className="navigation-bar">
-                                    <ul className="main-nav ulStyle">
-                                        <li className="section" style={{paddingLeft:0}}>
-                                            <a className="menuitem">TRENDING</a>
+                                    <ul className="main-nav ulStyle" onMouseLeave={() => this.closeSection()}>
+                                        <li className="section" onMouseOver={() => this.openSection('trending')} style={{paddingLeft:0}}>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.trending" /></a>
+                                            <div className="main-navigation-desktop-bg" onMouseLeave={() => this.closeSection()} onMouseOver={() => this.openSection('trending')} id="trending-section" style={{display:'none'}}>
+                                                <div className="section-categories">
+                                                    <div className="section-subcategories">
+                                                    <div className="subcategories-container">
+                                                        <div className="subcategories-col">
+                                                            <div className="subcategory">
+                                                                <div className="category-column">
+                                                                    <a className="subcategory-link">SHOP TRENDING</a>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">New</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Bestsellers</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Top Rated</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Holiday essentials</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="category-column">
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Travel sizes</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Power Couples</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Vegan Products</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="category-column">
+                                                                    <a className="subcategory-link">CHRISTMAS SNEAK PEAK</a>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Advent Calendars</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Sneak Peak Gifts</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="banners-col">
+                                                                    <ul className="banners">
+                                                                        <li>
+                                                                            <a className="banner-link">
+                                                                                <img src="https://assets.thebodyshop.com/medias/Trending-tea-tree2019.jpg?context=content-images/h01/hc3/45090061090846/Trending-tea-tree2019.jpg" />
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li className="section" onMouseOver={() => this.openSection('face')}>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.face" /></a>
+                                            <div className="main-navigation-desktop-bg" onMouseLeave={() => this.closeSection()} onMouseOver={() => this.openSection('face')} id="face-section" style={{display:'none'}}>
+                                                <div className="section-categories">
+                                                    <div className="section-subcategories">
+                                                    <div className="subcategories-container">
+                                                        <div className="subcategories-col">
+                                                            <div className="subcategory">
+                                                                <div className="category-column">
+                                                                    <a className="subcategory-link">BY PRODUCT TYPE</a>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Accessories</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Cleansers & Toners</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Correctors & Blemishes</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Eye Care</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Face Masks</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Lip Care</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Men's Shaving</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Men's Skincare</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Moisturisers</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Moisturisers with SPF</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Night Care</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="category-column">
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Scrubs & Exfoliators</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Targeted treatments</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Washes & Makeup</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Remover</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">View all Face</a>
+                                                                    </div>
+                                                                    <a className="subcategory-link">BY SKIN TYPE</a>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Combination</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Dry</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Sensitive</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Oily</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Normal</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="category-column">
+                                                                    <a className="subcategory-link">BY SKIN CONCERN</a>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Dull Tired Skin</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Enlarged Pores</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Fine Lines</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">First Signs of Ageing</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Oil Control</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Teen Skincare</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Uneven Skin Tone</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Enlarged Pores</a>
+                                                                    </div>
+                                                                    <a className="subcategory-link">VEGAN</a>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Vegan Skincare</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="banners-col">
+                                                                    <ul className="banners">
+                                                                        <li>
+                                                                            <a className="banner-link">
+                                                                                <img src="https://assets.thebodyshop.com/medias/Trending-tea-tree2019.jpg?context=content-images/h01/hc3/45090061090846/Trending-tea-tree2019.jpg" />
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                                   </div>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">FACE</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.body" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">BODY</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.hair" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">HAIR</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.makeup" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">MAKE UP</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.fragrance" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">FRAGRANCE</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.gifts" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">GIFTS</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.range" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">RANGE</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.tipsAdvice" /></a>
                                         </li>
                                         <li className="section">
-                                            <a className="menuitem">TIPS & ADVICE</a>
-                                        </li>
-                                        <li className="section">
-                                            <a className="menuitem">ABOUT US</a>
+                                            <a className="menuitem"><FormattedMessage id="header.menu.aboutUs" /></a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
-                    <div className="search-toggler">
+                    {/* <div className="search-toggler">
                             <input type="text" className="searchBoxStyle" />
                        
-                    </div>
-                    <p class="delivery-return-msg-desktop">3 for 2* use code: 19820 &nbsp;&nbsp; |&nbsp;&nbsp;  Free delivery over £25*</p>
+                    </div> */}
+                    <p class="delivery-return-msg-desktop">Enjoy free delivery over £25*</p>
                 </div>
             </div>
         </div>
-      
     );
   }
 }
