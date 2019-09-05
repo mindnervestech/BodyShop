@@ -1,0 +1,42 @@
+.login {
+    margin-top: 5%;
+    padding: 0 48px;
+    margin: 0 auto;
+    max-width: 1368px;
+}
+
+.login-container {
+    margin-top: 3%;
+    padding-top: 2%;
+    background-color: #F7F7F7;
+    width: 100%;
+}
+
+.title-size {
+	font-size: 1.35rem !important;
+}
+
+.widthBtn {
+	width: 30% !important;
+}
+
+.text-align-left {
+	text-align: left !important;
+}
+
+.register-info {
+	color: black;
+	background-color: transparent;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.register-link a:hover {
+	color: black;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+.paddingTopCustom {
+	padding-top: 8.5rem !important;
+}
