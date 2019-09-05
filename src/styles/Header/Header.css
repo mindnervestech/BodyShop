@@ -346,3 +346,15 @@
     }
 
 }
+@media (min-width: 1440px) {
+    .sticky-header {
+    background-color: #fff;
+    top: 0;
+    display: block;
+    position: fixed;
+    border: 0;
+    z-index: 1000;
+    width: 1368px;
+    padding-bottom: 11px;
+  }
+}

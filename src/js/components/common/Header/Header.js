@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { withRouter } from 'react-router-dom'
 import '../../../../styles/Header/Header.css';
 import Input from '../../common/InputBox/Input.js';
+import { Link, Redirect } from 'react-router-dom';
 
 class Header extends Component {
     constructor(props) {
@@ -20,16 +21,24 @@ class Header extends Component {
           if(menuName == 'trending') {
               document.getElementById('trending-section').style.display = 'block';
               document.getElementById('face-section').style.display = 'none';
+              document.getElementById('body-section').style.display = 'none';
           }
           if(menuName == 'face') {
             document.getElementById('face-section').style.display = 'block';
             document.getElementById('trending-section').style.display = 'none';
-        }
+            document.getElementById('body-section').style.display = 'none';
+          }
+          if(menuName == 'body') {
+            document.getElementById('body-section').style.display = 'block';
+            document.getElementById('face-section').style.display = 'none';
+            document.getElementById('trending-section').style.display = 'none';
+          }
       }
 
       closeSection() {
             document.getElementById('trending-section').style.display = 'none';
             document.getElementById('face-section').style.display = 'none';
+            document.getElementById('body-section').style.display = 'none';
     }
 
   render() {
@@ -61,7 +70,9 @@ class Header extends Component {
                         </div>
                         <div className="sticky-header-col sticky-header-col-two">
                             <a className="logo">
-                                <img title="The Body Shop" src="https://assets.thebodyshop.com/medias/tbs-logo.svg?context=content-images/h4d/h7c/8796377514014/tbs-logo.svg" alt="The Body Shop" class="loading"/>
+                                <Link className="logo" to={`/home`}>
+                                    <img title="The Body Shop" src="https://assets.thebodyshop.com/medias/tbs-logo.svg?context=content-images/h4d/h7c/8796377514014/tbs-logo.svg" alt="The Body Shop" class="loading"/>
+                                </Link>
                             </a>    
                         </div>
                         <div className="sticky-header-col sticky-header-col-three">
@@ -250,9 +261,6 @@ class Header extends Component {
                                                                     <div className="subcategory-item">
                                                                         <a className="subcategory-item-title">Uneven Skin Tone</a>
                                                                     </div>
-                                                                    <div className="subcategory-item">
-                                                                        <a className="subcategory-item-title">Enlarged Pores</a>
-                                                                    </div>
                                                                     <a className="subcategory-link">VEGAN</a>
                                                                     <div className="subcategory-item">
                                                                         <a className="subcategory-item-title">Vegan Skincare</a>
@@ -264,7 +272,7 @@ class Header extends Component {
                                                                     <ul className="banners">
                                                                         <li>
                                                                             <a className="banner-link">
-                                                                                <img src="https://assets.thebodyshop.com/medias/Trending-tea-tree2019.jpg?context=content-images/h01/hc3/45090061090846/Trending-tea-tree2019.jpg" />
+                                                                                <img src="https://assets.thebodyshop.com/medias/FACE40-Q3-2019-AO-CLEANSERS-MEGA-MENU.jpg?context=content-images/h4b/h0d/45090061156382/FACE40-Q3-2019-AO-CLEANSERS-MEGA-MENU.jpg" />
                                                                             </a>
                                                                         </li>
                                                                     </ul>
@@ -274,8 +282,107 @@ class Header extends Component {
                                                 </div>
                                             </div>
                                         </li>
-                                        <li className="section">
+                                        <li className="section" onMouseOver={() => this.openSection('body')}>
                                             <a className="menuitem"><FormattedMessage id="header.menu.body" /></a>
+                                            <div className="main-navigation-desktop-bg" onMouseLeave={() => this.closeSection()} onMouseOver={() => this.openSection('body')} id="body-section" style={{display:'none'}}>
+                                                <div className="section-categories">
+                                                    <div className="section-subcategories">
+                                                    <div className="subcategories-container">
+                                                        <div className="subcategories-col">
+                                                            <div className="subcategory">
+                                                                <div className="category-column">
+                                                                    <a className="subcategory-link">BY PRODUCT TYPE</a>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Accessories</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Bath Treats</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Body Butter</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Body Yogurts</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Body & Massage Oils</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Bronzing</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Deodorant</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Feet</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Hand Moisturisers</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="category-column">
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Hand Wash</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Hand Treatments</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Lotions & Sorbets</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Men's Body Care</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Nail Care</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Scrubs</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Seasonal Body Care</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Soaps</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Spa & Body Treatments</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Washes & Gels</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="category-column">
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">View all Body</a>
+                                                                    </div>
+                                                                    <a className="subcategory-link">BY SKIN TYPE</a>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Dry Skin</a>
+                                                                    </div>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Sensitive Skin</a>
+                                                                    </div>
+                                                                    <a className="subcategory-link">VEGAN</a>
+                                                                    <div className="subcategory-item">
+                                                                        <a className="subcategory-item-title">Vegan Bodycare</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="banners-col">
+                                                                    <ul className="banners">
+                                                                        <li>
+                                                                            <a className="banner-link">
+                                                                                <img src="https://assets.thebodyshop.com/medias/BODY41-Q3-2019-AO-SCRUBS-MEGA-MENU.jpg?context=content-images/h24/hd8/45090061221918/BODY41-Q3-2019-AO-SCRUBS-MEGA-MENU.jpg" />
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                                   </div>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li className="section">
                                             <a className="menuitem"><FormattedMessage id="header.menu.hair" /></a>
