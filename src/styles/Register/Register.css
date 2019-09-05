@@ -1,0 +1,77 @@
+.register {
+    margin-top: 5%;
+    padding: 0 48px;
+    margin: 0 auto;
+    max-width: 1368px;
+}
+
+.register-container {
+    margin-top: 3%;
+    padding-top: 2%;
+    background-color: #F7F7F7;
+    width: 100%;
+}
+
+.tncCheckmark {
+	background: #3b3c3b;
+    padding: 30px 12px;
+    margin-top: -4px;
+}
+
+.tncCheckmark Label {
+	color:#fff;
+}
+
+.tncCheckmark p{
+	color:#fff;
+}
+.tncCheckmark a{
+	color:#fff;
+}
+
+.register Label {
+	font-size: 14px !important;
+}
+.register-info-size {
+	font-size: 14px !important;
+	margin-left: 9% !important;
+}
+
+.register-info-size a {
+	text-decoration: underline !important;
+}
+.title-size {
+	font-size: 1.35rem !important;
+}
+
+.widthBtn {
+	width: 30% !important;
+}
+
+.text-align-left {
+	text-align: left !important;
+}
+
+.paddingTopCustom {
+	padding-top: 8.5rem !important;
+}
+
+.btntopMargin {
+	    margin-top: 2.0rem!important;
+}
+
+.updatesNews {
+	font-size: 14px !important;
+	text-decoration:none !important;
+
+}
+
+.updatesNews a:hover {
+	color: black;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+.register Label {
+	font-weight: bold;
+}
