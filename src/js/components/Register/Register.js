@@ -2,28 +2,23 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Form, FormGroup, Label, Input, Button, Row, Col, Breadcrumb, BreadcrumbItem, CustomInput } from 'reactstrap';
 import '../../../styles/Register/Register.css';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
-
-		handleAddAddress = () => {
-		console.log('add button clicked----');
+	handleAddAddress = () => {
 		document.getElementById("address-btn-add").style.display="none";
 		document.getElementById("address-btn-remove").style.display="block";
 		document.getElementById("addressForm").style.display="block";
-    	
 	};
 
 	handleRemoveAddress = () => {
-		console.log('remove button clicked----');
 		document.getElementById("address-btn-remove").style.display="none";
 		document.getElementById("address-btn-add").style.display="block";
 		document.getElementById("addressForm").style.display="none";
-    	
 	};
 
 	render() {
 		return(
-
 			<div className="text-align-center register paddingTopCustom">
                 <div className="display-inline register-container">
                     <div className="header4 title-size ">
@@ -33,16 +28,16 @@ class Register extends Component {
                         <Row>                          
                           <Col md="3"></Col>
                           <Col md="6">
-                            <a href="/login"><button type="button" className="primary-tab-normal widthBtn">
+                            <Link to={'/login'}><button type="button" className="primary-tab-normal widthBtn">
                                 <span>
                                     <FormattedMessage id="login.Login" className="primary-tab-normal" defaultMessage="LOGIN" />
                                 </span>
-                            </button></a>
-                            <a href="/register"><button type="button" className="primary-tab-selected widthBtn">
+                            </button></Link>
+                            <Link to={'/register'}><button type="button" className="primary-tab-selected widthBtn">
                                 <span>
                                     <FormattedMessage id="login.Register" className="primary-tab-selected" defaultMessage="REGISTER" />
                                 </span>
-                            </button></a>
+                            </button></Link>
                           </Col>
                           <Col md="3"></Col>
                         </Row>

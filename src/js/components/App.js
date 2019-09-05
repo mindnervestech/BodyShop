@@ -162,32 +162,7 @@ class App extends Component {
   }
 
   handleLanguageSelection = (language) => {
-    //console.log('In App Lang sel');
-
-    let country;
-    //country = (cookie.load('country') === null) ? 'KSA' : cookie.load('country');
-
-    if ((cookie.load('country') === null) || (cookie.load('country') === "undefined")) {
-      country = 'KSA';
-    } else {
-      country = cookie.load('country');
-    }
-    this.getStoreId(country, language);
-    this.handleDir(language);
-  }
-
-  handleCountrySelection = (country) => {
-    //console.log('In App country sel',country);
-
-    let language;
-    // language = (cookie.load('language') === null) ? 'ar' : cookie.load('language');
-    if ((cookie.load('language') === null) || (cookie.load('language') === "undefined")) {
-      language = 'ar';
-    } else {
-      language = cookie.load('language');
-    }
-
-    this.getStoreId(country, language);
+   // this.getStoreId(country, language);
     this.handleDir(language);
   }
 
@@ -277,7 +252,7 @@ class App extends Component {
               <ScrollToTop>
                 <>
                   {/* <Header /> */}
-                  <Header handleLanguageSelection={this.handleLanguageSelection} handleCountrySelection={this.handleCountrySelection} />
+                  <Header handleLanguageSelection={this.handleLanguageSelection} />
                   <Switch>
                     <Route path="/home" component={Home} />
                     <Route exact path="/" component={Home} />

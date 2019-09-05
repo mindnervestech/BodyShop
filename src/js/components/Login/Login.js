@@ -2,18 +2,10 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Form, FormGroup, Label, Input, Button, Row, Col, Breadcrumb, BreadcrumbItem  } from 'reactstrap';
 import '../../../styles/Login/Login.css';
+import { Link } from 'react-router-dom';
+
 class Login extends Component {
-
-
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         signUpState: 'login'
-    //     }
-    // }
-
     setSignUp = (state) => {
-        console.log('state',state);
         // this.setState({
         //     signUpState: state
         // })
@@ -31,16 +23,20 @@ class Login extends Component {
                         <Row>                          
                           <Col md="3"></Col>
                           <Col md="6">
-                            <a href="/login"><button type="button" className="primary-tab-selected widthBtn">
-                                <span>
-                                    <FormattedMessage id="login.Login" className="primary-tab-selected" defaultMessage="LOGIN" />
-                                </span>
-                            </button></a>
-                            <a href="/register"><button type="button" className="primary-tab-normal widthBtn" onClick={this.setSignUp('register')}>
-                                <span>
-                                    <FormattedMessage id="login.Register" defaultMessage="REGISTER" />
-                                </span>
-                            </button></a>
+                            <Link to={'/login'}>
+                              <button type="button" className="primary-tab-selected widthBtn">
+                                  <span>
+                                      <FormattedMessage id="login.Login" className="primary-tab-selected" defaultMessage="LOGIN" />
+                                  </span>
+                              </button>
+                            </Link>
+                            <Link to={'/register'}>
+                              <button type="button" className="primary-tab-normal widthBtn" onClick={this.setSignUp('register')}>
+                                  <span>
+                                      <FormattedMessage id="login.Register" defaultMessage="REGISTER" />
+                                  </span>
+                              </button>
+                            </Link>
                           </Col>
                           <Col md="3"></Col>
                         </Row>

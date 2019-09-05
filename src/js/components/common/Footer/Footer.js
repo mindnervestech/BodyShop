@@ -11,9 +11,6 @@ import instagram from '../../../../assets/footerIcons/InstagramLogov4.webp'
 import cards from '../../../../assets/footerIcons/cards.png'
 
 class Footer extends Component {
-
-
-  
   render() {
     return (
       <div className="footer-region-1">
