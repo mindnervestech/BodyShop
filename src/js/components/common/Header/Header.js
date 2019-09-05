@@ -35,21 +35,33 @@ class Header extends Component {
           }
       }
 
-      closeSection() {
+    closeSection() {
             document.getElementById('trending-section').style.display = 'none';
             document.getElementById('face-section').style.display = 'none';
             document.getElementById('body-section').style.display = 'none';
+    }
+
+    translate = (lang, dir) => {
+        this.props.handleLanguageSelection(lang, dir);
     }
 
   render() {
     return (
         <div className="main">
             <div className="main-inner">
-                <div className="sticky-header scroll-to-fixed-fixed">
+                <div className="sticky-header scroll-to-fixed-fixed" >
                     <header className="wrapper-global-header-desktop"></header>
                     <div className="sticky-header-row">
                         <div className="sticky-header-col sticky-header-col-one">
                         <ul className="ulStyle">
+                        <li class="content">
+                            <a href="javascript:void(0);" onClick={(e) => this.translate('en', 'ltr')}>
+                            <span class="text-store-finder">English</span>
+                            </a>
+                            <a href="javascript:void(0);" onClick={(e) => this.translate('ar', 'rtl')}>
+                            <span class="text-store-finder">| العربية</span>
+                            </a>
+                        </li>
                             <li class="content">
                                 <a aria-label="Store finder">
                                     <span class="icons store-finder"></span><span class="text-store-finder"><FormattedMessage id="header.stores" /></span> 
@@ -386,6 +398,7 @@ class Header extends Component {
                                         </li>
                                         <li className="section">
                                             <a className="menuitem"><FormattedMessage id="header.menu.hair" /></a>
+                                            
                                         </li>
                                         <li className="section">
                                             <a className="menuitem"><FormattedMessage id="header.menu.makeup" /></a>
@@ -417,6 +430,59 @@ class Header extends Component {
                     <p class="delivery-return-msg-desktop">Enjoy free delivery over £25*</p>
                 </div>
             </div>
+
+            <div className="sticky-header-mobile">
+                    <header className="wrapper-global-header-mobile">
+                        <div style={{height:34}}>
+                            <ul className="row wrapper-sticky-search-toggle-mobile">
+                                <li className="col-header">
+                                    <a>
+                                        <span className="icons mobile-nav"></span>
+                                    </a>
+                                </li>
+                                <li className="col-header">
+                                    <span>
+                                        <a>
+                                            <span className="icons icon-header-search"></span>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li className="col-header">
+                                    <a className="logo">
+                                        <Link className="logo" to={`/home`}>
+                                            <img title="The Body Shop" src="https://assets.thebodyshop.com/medias/tbs-logo.svg?context=content-images/h4d/h7c/8796377514014/tbs-logo.svg" alt="The Body Shop" class="loading" />
+                                        </Link>
+                                    </a>
+                                </li>
+                                <li className="col-header">
+                                    <a>
+                                        <span className="icons store-finder"></span>
+                                    </a>
+                                </li>
+                                <li className="col-header">
+                                    <a className="full-basket">
+                                        <span className="icons mini-basket"></span>
+                                        <span className="basket-icon-circle">1</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="head-menu-item">
+                            <p class="delivery-return-msg-mobile">Enjoy free delivery over £25*</p>
+                        </div>
+
+
+                        <div className="yCmsComponent megamenu_mobile">
+                            <div className="dynamic-area"></div>
+                            <div className="main-navigation">
+
+                            </div>
+
+                        </div>
+                    </header>
+                </div>
+                <div className="sticky-header-mobile-spacer"></div>
+
         </div>
     );
   }
