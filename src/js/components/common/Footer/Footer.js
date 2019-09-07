@@ -11,6 +11,9 @@ import instagram from '../../../../assets/footerIcons/InstagramLogov4.webp'
 import cards from '../../../../assets/footerIcons/cards.png'
 
 class Footer extends Component {
+
+
+  
   render() {
     return (
       <div className="footer-region-1">
@@ -114,7 +117,7 @@ class Footer extends Component {
   </div>
   <div className="footer-region-2 row nopadding tab">
     <div className ="col-md-1 nopadding" />
-    <div className = "col-md-11 row">
+    <div className = "col-md-11 row nopadding">
       <div className="col-md-9 footer-text-3 nopadding">
         <br />
         <p className ="nopadding">*<FormattedMessage id="footer.exclusion" defaultmessage="Exclusion Apply, see " /> 
@@ -131,17 +134,7 @@ class Footer extends Component {
         </p>
       </div>
       <div className="col-md-3 nopadding">
-        <div>
-         <select className="dropdown">
-           <option value="A" >AAAAA</option>
-           <option value="B" >BBBBB</option>
-           <option value="C" >CCCCC</option>
-           <option value="D" >DDDDD</option>
-         </select>
-        <div>
-         <img src ={cards} />
-        </div>
-      </div>
+        <img src ={cards} className="footer-cards-image" />
       </div>
     </div>
   </div>  
