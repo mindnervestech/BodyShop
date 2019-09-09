@@ -10,7 +10,7 @@ class OurCommitment extends Component
         return(
         <div className="commit-main">
             <div className="page-desc-path" id="top-link-part">
-            <Link to={`/login`} className="home-link">Home</Link> / Manifesto | Our Commitment
+            <Link to={`/home`} className="home-link">Home</Link> / Manifesto | Our Commitment
             </div>
 
             <div>

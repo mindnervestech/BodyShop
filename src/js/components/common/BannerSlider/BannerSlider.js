@@ -6,13 +6,14 @@ import 'slick-carousel/slick/slick.css';
 import './BannerSlider.css';
 import leftArrowImg from '../../../../assets/images/homePage/icon-arrow-l-white.svg'
 import rightArrowImg from '../../../../assets/images/homePage/icon-arrow-r-white.svg'
+import {Picture} from 'react-responsive-picture';
+
 
 function LeftNavButton(props) {
     const {className, style, onClick} = props
     return (
     <div
     className="slick-arrow slick-prev"
-    style={{...style, display: 'block'}}
     onClick={onClick}
     >
     <img src={leftArrowImg} alt="Prev" style={{width:50}}/>
@@ -25,7 +26,6 @@ function LeftNavButton(props) {
     return (
     <div
     className="slick-arrow slick-next"
-    style={{...style, display: 'block'}}
     onClick={onClick}
     >
     <img src={rightArrowImg} alt="Next" style={{width:50}}/>
@@ -67,8 +67,15 @@ function LeftNavButton(props) {
                 {
                   return(
                       <div>
-                        <a href ={dataBanner.link}>
-                          <img src ={dataBanner.url} className="slider-images" />
+                        <a href ={dataBanner.BLOCK_URL}>
+                        <Picture className="slider-images" 
+                          sources = {[
+                              { srcSet :dataBanner.BLOCK_BANNER, 
+                                  media: "(min-width:641px)"
+                              },
+                              { srcSet :dataBanner.BLOCK_MOBILE_BANNER
+                              }
+                          ]} />
                         </a>
                       </div>
                     )

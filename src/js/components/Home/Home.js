@@ -21,7 +21,9 @@ import productImage5 from '../../../assets/images/homePage/productImage5.jpg';
 import sliderimg1 from '../../../assets/images/homePage/slider1.jpg';
 import sliderimg2 from '../../../assets/images/homePage/slider2.webp';
 import sliderimg3 from '../../../assets/images/homePage/slider3.webp';
-
+import slidermob1 from '../../../assets/images/homePage/slidermob1.jpg';
+import slidermob2 from '../../../assets/images/homePage/slidermob2.jpg';
+import slidermob3 from '../../../assets/images/homePage/slidermob3.jpg';
 
 
 class Home extends Component {
@@ -34,61 +36,64 @@ class Home extends Component {
         url: productImage1,
         name: "product no 1",
         price: "999 SAR",
-        link: "aaa"
+        link: ""
       },
       {
         url: productImage2,
         name: "product no 2",
         price: "999 SAR",
-        link: "aaa"
+        link: ""
       },
       {
         url: productImage3,
         name: "product no 3",
         price: "999 SAR",
-        link: "aaa"
+        link: ""
       },
       {
         url: productImage4,
         name: "product no 4",
         price: "999 SAR",
-        link: "aaa"
+        link: ""
       },
       {
         url: productImage5,
         name: "product no 5 sdarfhjwqrlfugqlfnbq,kjdhlwqiuefhk",
         price: "999 SAR",
-        link: "aaa"
+        link: ""
       }
     ]
       
   const dataPromo= [
       {
         url:tabimg1,
-        link:"aaa"
+        link:""
       },
       {
         url:tabimg2,
-        link:"aaa"
+        link:""
       },
       {
         url:tabimg3,
-        link:"aaa"
+        link:""
       }
     ]
 
   const dataBanner=[
     {
-      url:sliderimg1,
-      link:"aaa"
+      BLOCK_BANNER:sliderimg1,
+      BLOCK_MOBILE_BANNER:slidermob1,
+      BLOCK_URL:""
     },
     {
-      url:sliderimg2,
-      link:"aaa"
+      BLOCK_BANNER:sliderimg2,
+      BLOCK_MOBILE_BANNER:slidermob2,
+      BLOCK_URL:""
     },
     {
-      url:sliderimg3,
-      link:"aaa"
+      BLOCK_BANNER:sliderimg3,
+      BLOCK_MOBILE_BANNER:slidermob3,
+      BLOCK_URL:""
     }
   ]  
     return (

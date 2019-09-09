@@ -9,7 +9,6 @@
         font-family: openSansSemibold;
         line-height: 20px;
     }
-    
 }
 
 @media(max-width:1024px){
@@ -77,10 +76,13 @@
     position: relative;
 }
 
+.image-with-text-transist:hover{
+    cursor: pointer;
+}
+
 .image-with-text-transist img{
     width: 100%;
     height: auto;
-    cursor: pointer;
 }
 
 
@@ -95,6 +97,9 @@
     transition: height .5s ease;
 }
 
+.transist-contentbox:focus{
+border: 2px blue;
+}
 .image-with-text-transist:hover .transist-contentbox{
     height: 50%;
     color: #ffffff;
@@ -109,4 +114,57 @@
 .text-on-hover-wrapper{
     padding-top: 6%;
     padding-bottom: 5%
+}
+
+.modal-container{
+    padding-top: 9%;
+    border:none;
+    max-width: 900px;
+    margin: auto;
+    z-index: 1050;
+}
+
+.modal-container-box{
+    max-width: 900px;
+    margin: auto;
+    height: 480px;
+    text-align: center;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.close-button-modal-container{
+    text-align: right;
+    padding: 0px;
+    height: 50px;
+}
+.close-button-modal{
+    width: 32px;
+    height: auto;
+    background-color: transparent;
+    border: transparent;
+}
+
+.modal-image{
+    width: 100%;
+    height: auto;
+}
+.modal-image-container{
+    float: left;
+    padding-left: 50px;
+    padding-right: 25px;
+    padding-top: 0px !important;
+    width: 50%
+}
+
+.modal-text-container{
+    float: right;
+    padding-left: 25px;
+    padding-right: 50px;
+    padding-top: 0px !important;
+    width: 50%;
+    letter-spacing: .5px;
+    font-family: openSansSemibold;
+    text-align: left !important;
+    font-size: 14px
 }

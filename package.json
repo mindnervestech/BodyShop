@@ -70,6 +70,7 @@
     "react-image-magnify": "^2.7.4",
     "react-intl": "^2.9.0",
     "react-intl-tel-input": "^7.0.1",
+    "react-modal": "^3.10.1",
     "react-multi-carousel": "^2.2.2",
     "react-parallax": "^2.2.0",
     "react-popup": "^0.10.0",

@@ -3,17 +3,34 @@ import { Link, Redirect } from 'react-router-dom';
 import {Picture} from 'react-responsive-picture';
 import '../../../../styles/StaticPages/CommunityFair.css';
 import '../../../../styles/StaticPages/OurCommitment.css';
+import ReactModal from 'react-modal';
 
 
 class CommunityFair extends Component
-{
+{    constructor () {
+        super();
+        this.state = {
+        showModal: false
+        };
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+    }
+  
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+  
+  handleCloseModal () {
+    this.setState({ showModal: false });
+  }
+
     render()
     {
 
         return(
         <div className="commit-main">
             <div className="page-desc-path" id="top-link-part">
-            <Link to={`/login`} className="home-link">Home</Link> / Community Fair Trade In Beauty | Commitment | The Body Shop
+            <Link to={`/home`} className="home-link">Home</Link> / Community Fair Trade In Beauty | Commitment | The Body Shop
             </div>
             <div >
                 <Picture className="fullimage" 
@@ -84,11 +101,11 @@ class CommunityFair extends Component
                 <button className="btn-secondary btn-width">VIEW INTERACTIVE MAP</button>
                 </div>
             </div>
-
+                    
             <div className="text-on-hover-wrapper">
                 <div className="row nopadding2">
-                    <div className="col-md-3 image-with-text-transist nopadding2">
-                        <img src ="https://assets.thebodyshop.com/medias/29558967631902.jpg?context=images/h0e/h51/29558967631902.jpg" />
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal} >
+                        <img src="https://assets.thebodyshop.com/medias/29558967631902.jpg?context=images/h0e/h51/29558967631902.jpg" />                
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
                                 <h2>1987</h2>
@@ -96,8 +113,26 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
-
-                    <div className="col-md-3 image-with-text-transist nopadding2">
+                    <ReactModal id="Community_Trade" isOpen={this.state.showModal} onRequestClose={this.handleCloseModal} className="modal-container" >
+                            <div className="modal-container-box">
+                                <div className="close-button-modal-container">
+                                    <button className="close-button-modal" onClick={this.handleCloseModal}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                </div>
+                                <div>
+                                    <div className="modal-image-container">
+                                        <img className="modal-image" src="https://assets.thebodyshop.com/medias/29558967631902.jpg?context=images/h0e/h51/29558967631902.jpg" />                
+                                    </div>
+                                    <div className="modal-text-container">
+                                        <h2>1987</h2>
+                                        <p>Community Trade</p>
+                                        <br />
+                                        <p>Our pioneering Community Fair Tradeprogramme started when The Body Shopstarted sourcing ‘footsie’ massage rollersfrom an education and employment charityin India, which became a best-selling line. </p>
+                                    </div>
+                                </div>
+                            </div>
+                    </ReactModal>
+                 
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal}>
                         <img src ="https://assets.thebodyshop.com/medias/29558968090654.jpg?context=images/ha0/h5c/29558968090654.jpg" />
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -106,6 +141,25 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
+                    
+                    <ReactModal  isOpen={this.state.showModal} onRequestClose={this.handleCloseModal} className="modal-container" >
+                            <div className="modal-container-box">
+                                <div className="close-button-modal-container">
+                                    <button className="close-button-modal" onClick={this.handleCloseModal}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                </div>
+                                <div>
+                                    <div className="modal-image-container">
+                                        <img className="modal-image" src="https://assets.thebodyshop.com/medias/29558968090654.jpg?context=images/ha0/h5c/29558968090654.jpg" />                
+                                    </div>
+                                    <div className="modal-text-container">
+                                        <h2>1989</h2>
+                                        <p>Community Trade</p>
+                                        <br />
+                                        <p>Our pioneering Community Fair Tradeprogramme started when The Body Shopstarted sourcing ‘footsie’ massage rollersfrom an education and employment charityin India, which became a best-selling line. </p>
+                                    </div>
+                                </div>
+                            </div>
+                    </ReactModal>
 
                     <div className="col-md-3 image-with-text-transist nopadding2">
                         <img src ="https://assets.thebodyshop.com/medias/29558976741406.jpg?context=images/he6/h6a/29558976741406.jpg" />
