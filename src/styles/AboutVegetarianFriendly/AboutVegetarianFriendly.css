@@ -1,0 +1,110 @@
+.about-veg-friendly-main {
+    margin-top: 10% !important;
+    padding: 0 48px;
+    margin: 0 auto;
+    max-width: 1368px;
+    margin-bottom: 22px;
+}
+
+.about-veg-friendly-container {
+    margin-top: 3%;
+    padding-top: 2%;
+    width: 100%;
+}
+
+.about-veg-friendly-header {
+    width: 100%;
+    height: auto;
+    padding: 0 48px;
+}
+
+.veg-friendly-header-content {
+	text-align: center;
+}
+
+.veg-friendly-header-content-inner {
+    font-family: interstateBlackCond;
+	font-size: 112px;
+	line-height: 99px;
+	font-weight: 700;
+}
+
+.veg-friendly-subheader-content {
+    font-family: InterstateRegularCondensed;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.veg-friendly-subheader-content h2 {
+    font-size: 42px !important;
+}
+
+.veg-friendly-info {
+    padding: 0 115px;
+    text-align: center;
+    font-family: openSansSemibold;
+}
+
+.veg-friendly-margin-top {
+	margin-top: 5%;	
+}
+
+.about-veg-friendly-qa hr {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.veg-friendly-qa-col-div {
+    margin: 10% 5% 5% 5%;
+}
+
+.veg-friendly-qa-col-div h2 {
+    text-align: center;
+    font-size: 17px !important;
+    font-weight: bold !important;
+    margin: 10% 0% 5% 0% !important;
+}
+
+.veg-friendly-qa-col-div-content {
+    margin: 20% 5% 5% 5%;
+}
+
+.veg-friendly-qa-col-div-content h2 {
+    text-align: center;
+    font-size: 17px !important;
+    font-weight: bold !important;
+    margin-bottom: 5% !important;
+}
+
+.veg-friendly-qa-col-paragraph {
+    
+    text-align: center;
+    font-family: openSansSemibold;
+    font-size: 14px !important;
+}
+
+.veg-friendly-qa-header-margin {
+    margin-top: 20% important;
+}
+
+.veg-friendly-discover-more-btn {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.veg-friendly-product-info {
+    margin-top: 3% !important;
+    text-align: center;
+}
+
+.veg-friendly-product-info h2 {
+    font-family: interstateBlackCond;
+    margin-bottom: 2%;
+}
+
+.veg-friendly-product-info p {
+    font-family: openSansSemibold;
+    font-size: 14px !important;
+}

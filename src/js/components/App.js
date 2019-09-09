@@ -13,7 +13,10 @@ import { Route, Link, Switch } from 'react-router-dom'
 import Home from './Home/Home';
 import Login from './Login/Login';
 // import Register from './Register/RegisterForm';
-
+import AboutUs from './Static/AboutUs/AboutUs';
+import AboutNatura from './Static/AboutNatura/AboutNatura';
+import AboutVegetarianFriendly from './Static/AboutVegetarianFriendly/AboutVegetarianFriendly';
+import AboutOurHeritage from './Static/AboutOurHeritage/AboutOurHeritage';
 //import StoreLocator from './StoreLocator/store-locator';
 import { BrowserRouter } from 'react-router-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
@@ -256,7 +259,10 @@ class App extends Component {
                     <Route path="/home" component={Home} />
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={Login} />
-                    {/* <Route exact path="/register" component={Register} /> */}
+                    <Route exact path="/aboutus" component={AboutUs} />
+                    <Route exact path="/aboutus-natura" component={AboutNatura} />
+                    <Route exact path="/aboutus-vegetarian-friendly" component={AboutVegetarianFriendly} />
+                    <Route exact path="/aboutus-our-heritage" component={AboutOurHeritage} />
                   </Switch>
                   <Footer />
                 </>

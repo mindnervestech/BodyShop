@@ -1,0 +1,104 @@
+.aboutUs-main {
+    margin-top: 10% !important;
+    padding: 0 48px;
+    margin: 0 auto;
+    max-width: 1368px;
+    margin-bottom: 22px;
+}
+
+.aboutUs-container {
+    margin-top: 3%;
+    padding-top: 2%;
+    width: 100%;
+}
+
+.aboutUs-image {
+    width: 100%;
+    height: auto;
+}
+
+.aboutUs-image-info {
+	padding: 0 48px;
+	position: relative;
+	margin-top: -13%;
+    left: 0;
+}
+
+.aboutUs-image-container {
+	background-color: #fff;
+	text-align: center;
+}
+
+.aboutUs-header-info {
+	font-size: 114px;
+	letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: interstateBold;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.aboutUs-paragraph-info {
+	padding: 0 115px;
+	font-family: interstateBold;
+	font-weight: 400;	
+}
+
+.aboutUs-margin-top {
+	margin-top: 5%;	
+}
+
+.aboutUs-qa hr {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.aboutUs-qa-col-div {
+    margin: 10% 5% 5% 5%;
+}
+
+.aboutUs-qa-col-div h2 {
+    text-align: center;
+    font-size: 17px !important;
+    font-weight: bold !important;
+    margin: 10% 0% 5% 0% !important;
+}
+
+.aboutUs-qa-col-paragraph {
+    text-align: center;
+    font-family: openSansSemibold;
+    font-size: 14px !important;
+}
+
+.aboutUs-discover-more-btn {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.aboutUs-images-div {
+	margin: 5% 1%;
+}
+
+.aboutUs-image-width {
+	width: inherit;
+}
+
+.aboutUs-image-height-width {
+	width: inherit;
+	height: 498px;
+}
+
+.aboutUs-image-div-col {
+	text-align: center;
+}
+
+.aboutUs-image-div-col h3 {
+	margin: 5% 0%;
+	font-weight: bold;
+}
+
+.aboutUs-image-div-col p {
+	font-family: openSansSemibold;
+    font-size: 14px !important;
+    margin: 2%;
+}
