@@ -13,8 +13,8 @@ import { Route, Link, Switch } from 'react-router-dom'
 import Home from './Home/Home';
 import Login from './Login/Login';
 import OurCommitment from './Static/AboutUsOurCommitment/aboutUsOurCommitment';
+import CommunityFair from './Static/AboutUsCommunityFair/aboutUsCommunityFair';
 
-// import Register from './Register/RegisterForm';
 
 //import StoreLocator from './StoreLocator/store-locator';
 import { BrowserRouter } from 'react-router-dom';
@@ -259,6 +259,7 @@ class App extends Component {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/AboutUs-OurCommitment" component={OurCommitment} />
+                    <Route exact path="/AboutUs-CommunityFair" component={CommunityFair} />
                     {/* <Route exact path="/register" component={Register} /> */}
                   </Switch>
                   <Footer />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import '../../../../styles/AboutUsOurCommitment/OurCommitment.css';
+import '../../../../styles/StaticPages/OurCommitment.css';
 
 class OurCommitment extends Component
 {
@@ -8,8 +8,12 @@ class OurCommitment extends Component
     {
 
         return(
-        <div>
-            <div className="commit-main">
+        <div className="commit-main">
+            <div className="page-desc-path" id="top-link-part">
+            <Link to={`/login`} className="home-link">Home</Link> / Manifesto | Our Commitment
+            </div>
+
+            <div>
                 <div className="header-block">
                     <div className="heading">OUR COMMITMENT</div>
                     <div className="heading-two">“THE BUSINESS OF BUSINESS SHOULD NOT BE ABOUT MONEY. IT SHOULD BE ABOUT RESPONSIBILITY. IT SHOULD BE ABOUT PUBLIC GOOD, NOT PRIVATE GREED.” – ANITA RODDICK</div>
@@ -31,11 +35,9 @@ class OurCommitment extends Component
                     <img src="https://assets.thebodyshop.com/medias/28903225753630.jpg?context=images/h6f/hce/28903225753630.jpg"  className="fullimage"/>                    
                    
                     <div className="play-icon-positioner row nopadding2">
-                        <div className="col-md-4 nopadding2" />
                         <a href="https://youtu.be/tJi9Klh5YTs" className="col-md-3 nopadding2">
                             <div className="play-button-icon "></div>
                         </a>
-                        <div className="col-md-4 nopadding2 " />      
                     </div>
                 </div>
 
