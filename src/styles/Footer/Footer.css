@@ -25,7 +25,6 @@
         margin: 0;
         padding: 0;
         display: block;
-        position: relative;
         border: 0;
         background: #f7f7f7;
 }
@@ -160,4 +159,10 @@
     .tab{
         text-align: center
     }
+}
+
+
+.footer-cards-image{
+    width: 100%;
+    height: auto;
 }

@@ -30,7 +30,7 @@
     "footer.joinus": "JOIN US ON SOCIAL",
     "footer.signup": "SIGN UP FOR OUR EXCLUSIVE OFFERS",
     "footer.helpcenter": "HERE TO HELP",
-    "footer.custcare": "Customer Care",
+    "footer.custcare": "Customer Care (FAQ)",
     "footer.privacy": "Privacy Enquiries",
     "footer.useful": "USEFUL INFORMATION",
     "footer.delivery": "Delivery Information",
@@ -70,7 +70,7 @@
     "home.loveBody": "LOVE YOUR BODY™ CLUB",
     "home.community": "COMMUNITY TRADE RECYCLED PLASTICS",
     "home.readMore": "READ MORE",
-
+    "home.view": "VIEW",
     "login.Title" : "LOGIN OR REGISTER",
     "login.Login" : "LOGIN",
     "login.Register" : "REGISTER",
@@ -80,7 +80,6 @@
     "login.loginBtn" : "LOGIN",
     "login.notRegisteredYet" : "Not registered yet?",
     "login.registerNow" : "Register now",
-
     "register.title" : "Title",
     "register.firstName" : "FirstName",
     "register.lastName" : "LastName",

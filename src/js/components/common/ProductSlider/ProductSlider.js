@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import './ProductSlider.css';
 import '../../../../styles/App.css';
+import '../../../../styles/homePage/homePage.css'
 import leftArrowImg from '../../../../assets/images/homePage/icon-arrow-l-black.png';
 import rightArrowImg from '../../../../assets/images/homePage/icon-arrow-r-black.png';
 import { FormattedMessage } from '../../../../../node_modules/react-intl';
@@ -31,6 +32,7 @@ class ProductSlider extends Component {
         super(props);
     }
     render() {
+
         const { productData } = this.props;
         var settings = {
             dots: false,
@@ -39,7 +41,17 @@ class ProductSlider extends Component {
             slidesToShow: 4,
             slidesToScroll: 1,
             prevArrow: <LeftNavButton />,
-            nextArrow: <RightNavButton />
+            nextArrow: <RightNavButton />,
+            responsive: [
+                {
+                    breakpoint: 641,
+                    settings: {
+                        slidesToShow: 1,            
+                        prevArrow: <LeftNavButton />,
+                        nextArrow: <RightNavButton />,
+                    }
+                }
+            ]
             
         };
         
