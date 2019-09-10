@@ -1,134 +1,95 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { Form, FormGroup, Label, Input, Button, Row, Col, Breadcrumb, BreadcrumbItem  } from 'reactstrap';
-import "./Login.css";
- class Login extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         signUpState: 'login'
-    //     }
-    // }
+import { Row, Col } from 'reactstrap';
+import '../../../styles/Login/Login.css';
+import { Link } from 'react-router-dom';
+import * as actions from '.././../redux/actions/index';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
+import LoginForm from './LoginForm.js';
+import RegisterForm from '../Register/RegisterForm.js';
 
-    setSignUp = (state) => {
-        console.log('state',state);
-        // this.setState({
-        //     signUpState: state
-        // })
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      signUpState: 'login'
+    }
+  }
+
+  setSignUp = (state) => {
+      this.setState({
+          signUpState: state
+      })
+  }
+
+  login = (email, password) => {
+    const payload = {
+        email: email,
+        password: password,
+        guestquote: ''
     }
 
-    render () {
+    this.props.onLoginUser(payload);
+  }
 
-        return (
-            // <div className="text-align-center login">
-            //     <div className="display-inline login-container">
-            //         <div className="header4 signup-title">
-            //             <span><FormattedMessage id="login.Title" defaultMessage="LOGIN OR REGISTER" /></span>
-            //         </div>
-            //         <div>
-            //             <button type="button" className="primary-tab-selected" onClick={this.setSignUp('login')}>
-            //                 <span>
-            //                     <FormattedMessage id="login.Login" className="primary-tab-selected" defaultMessage="LOGIN OR REGISTER" />
-            //                 </span>
-            //             </button>
-            //             <button className="primary-tab-normal" onClick={this.setSignUp('register')}>
-            //                 <span>
-            //                     <FormattedMessage id="login.Register" defaultMessage="LOGIN OR REGISTER" />
-            //                 </span>
-            //             </button>
-            //         </div>
+  register = (data) => {
+    const payload = data;
+      this.props.onRegisterUserUser(payload);
+  }
 
-                   
-            //     </div>
-            // </div>
-            <div className="login">
-
-
-      <Breadcrumb>
-        <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
-        <BreadcrumbItem active>Login</BreadcrumbItem>
-      </Breadcrumb>
+  render() {
+    return (
+            <div className="text-align-center login paddingTopCustom">
                 <div className="display-inline login-container">
-                        <Row>
-                            <Col md="12">
-                                <Row>
-                                    <Col md="3">
-
-                                    </Col>
-
-                                    <Col md="5">
-                                        <div className="header4 signup-title text-align-center">
-                                            <span><FormattedMessage id="login.Title" defaultMessage="LOGIN OR REGISTER" /></span>
-                                        </div>
-
-                                        
-                                           <Row>
-                                                <Col md="1"></Col>
-                                                <Col md="4" className="pt-2">
-                                                     <Button color="primary" size="md" block>LOGIN</Button>
-                                                </Col>
-                                                <Col md="4" className="pt-2">
-                                                     <Button color="secondary" size="md" block>REGISTER</Button>
-                                                </Col>
-                                                <Col md="2"></Col>
-                                           </Row>
-                                        
-
-                                        <Form>
-                                            <FormGroup>
-                                                <Row>
-                                                    <Col md="2"></Col>
-                                                    <Col md="6" className="pt-4">
-                                                        <Label for="loginEmailLabel">Email address</Label>
-                                                        <Input type="email" name="email" id="loginEmail" />
-                                                    </Col>
-                                                    <Col md="3"></Col>
-                                                </Row>
-                                            </FormGroup>
-
-                                            <FormGroup>
-                                                <Row>
-                                                    <Col md="2"></Col>
-                                                    <Col md="6" className="pt-2">
-                                                        <Label for="loginPasswordLabel">Password</Label>
-                                                        <Input type="password" name="password" id="loginPassword" />
-                                                    </Col>
-                                                    <Col md="3"></Col>
-                                                </Row>
-                                            </FormGroup>
-
-
-                                                    <Row>
-                                                        <Col md="2"></Col>
-                                                        <Col md="6"><a href="#">Forgot your password?</a></Col>
-                                                    </Row>
-
-                                            <FormGroup>
-                                                <Row>
-                                                    <Col md="2"></Col>
-                                                    <Col md="6" className="pt-4">
-                                                         <Button className="btn-grey" size="md" block>LOGIN</Button>
-                                                    </Col>
-                                                    <Col md="3"></Col>
-                                                </Row>
-                                            </FormGroup>
-
-                                             <Row>
-                                                    <Col md="3"></Col>
-                                                    <Col md="6"><span>Not registered yet?</span><a href="#">Register now</a></Col>
-                                               </Row>
-                                        </Form>                      
-                                    </Col>
-
-                                    <Col md="3">
-                                    
-                                    </Col>
-                                </Row>
-                            </Col>
+                    <div className="header4 title-size signup-title">
+                        <span><FormattedMessage id="login.Title" defaultMessage="LOGIN OR REGISTER" /></span>
+                    </div>
+                    <div className="mt-4">
+                        <Row>                          
+                          <Col md="3"></Col>
+                          <Col md="6">
+                              <button type="button" className={(this.state.signUpState == 'login' ? "primary-tab-selected " : "primary-tab-normal") + ' widthBtn'} 
+                                onClick={() => this.setSignUp('login')}>
+                                  <span>
+                                      <FormattedMessage id="login.Login" className="primary-tab-selected" defaultMessage="LOGIN" />
+                                  </span>
+                              </button>
+                              <button type="button" className={(this.state.signUpState == 'register' ? "primary-tab-selected " : "primary-tab-normal") + ' widthBtn'} 
+                                onClick={() => this.setSignUp('register')}>
+                                  <span>
+                                      <FormattedMessage id="login.Register" defaultMessage="REGISTER" />
+                                  </span>
+                              </button>
+                          </Col>
+                          <Col md="3"></Col>
                         </Row>
+                        {this.state.signUpState == 'login' && <LoginForm login={this.login}/>}
+                        {this.state.signUpState == 'register' && <RegisterForm register={this.register} />}
+
+                    </div>
                 </div>
             </div>
-        );
-    }
-}  
-export default Login;
+      );
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    guestUser: state.guest_user,
+    customer_details: state.customer_details,
+    login_error: state.invalidLogin,
+    globals: state.global,
+  };
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+      onLoginUser: (payload) => dispatch(actions.loginUser(payload)),
+
+      onRegisterUserUser: (payload) => dispatch(actions.registerUser(payload)),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Login));
+

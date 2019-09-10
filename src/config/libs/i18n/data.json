@@ -33,7 +33,7 @@
     "footer.joinus": "JOIN US ON SOCIAL",
     "footer.signup": "SIGN UP FOR OUR EXCLUSIVE OFFERS",
     "footer.helpcenter": "HERE TO HELP",
-    "footer.custcare": "Customer Care",
+    "footer.custcare": "Customer Care (FAQ)",
     "footer.privacy": "Privacy Enquiries",
     "footer.useful": "USEFUL INFORMATION",
     "footer.delivery": "Delivery Information",
@@ -83,7 +83,7 @@
     "login.loginBtn" : "LOGIN",
     "login.notRegisteredYet" : "Not registered yet?",
     "login.registerNow" : "Register now",
-
+     "home.view": "VIEW",
     "register.title" : "Title",
     "register.firstName" : "FirstName",
     "register.lastName" : "LastName",
@@ -101,7 +101,7 @@
     "register.overAge" : "I confirm that I am over the age of 16 and have read and agreed to the",
     "register.register" : "REGISTER",
     "register.note" : "We will use your information to manage your account and requests and for research and analytics. We may share your information with trusted parties acting on our behalf and other The Body Shop companies. For further information on how we treat your personal information, please see our Privacy Notice",
-
+    
     "register.validation.firstName.empty" : "First Name cannot be empty",
     "register.validation.lastName.empty" : "Last Name cannot be empty",
     "register.validation.email.empty" : "Email address cannot be empty",

@@ -1,0 +1,35 @@
+
+    .home-main {
+    padding: 0 48px;
+    margin: 0 auto;
+    max-width: 1368px;
+    margin-top: 145px;
+    margin-bottom: 22px
+    }
+    
+@media(max-width:1024px){
+    .home-main{
+        padding:0 15px;
+        margin: 0px !important;
+    }
+}
+.content-wrapper{
+    text-align: center
+}
+
+@media(max-width: 750px) {
+    .tab{
+        text-align: center;
+        padding-top: 10px;
+    } 
+
+}
+.tab{
+    width: 100%;
+    height: auto;
+    align-items: center
+}
+
+.btnwidth{
+    width:190px; 
+}
