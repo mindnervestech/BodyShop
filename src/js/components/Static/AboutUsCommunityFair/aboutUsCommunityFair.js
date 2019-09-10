@@ -10,23 +10,67 @@ class CommunityFair extends Component
 {    constructor () {
         super();
         this.state = {
-        showModal: false
+        showModal1: false, showModal2: false, showModal3: false, showModal4: false, showModal5: false, 
+        showModal6: false, showModal7: false, showModal8: false, showModal9: false
         };
-        this.handleOpenModal = this.handleOpenModal.bind(this);
-        this.handleCloseModal = this.handleCloseModal.bind(this);
+        this.handleOpenModal1 = this.handleOpenModal1.bind(this);
+        this.handleCloseModal1 = this.handleCloseModal1.bind(this);
+        
+        this.handleOpenModal2 = this.handleOpenModal2.bind(this);
+        this.handleCloseModal2 = this.handleCloseModal2.bind(this);
+        
+        this.handleOpenModal3 = this.handleOpenModal3.bind(this);
+        this.handleCloseModal3 = this.handleCloseModal3.bind(this);
+        
+        this.handleOpenModal4 = this.handleOpenModal4.bind(this);
+        this.handleCloseModal4 = this.handleCloseModal4.bind(this);
+        
+        this.handleOpenModal5 = this.handleOpenModal5.bind(this);
+        this.handleCloseModal5 = this.handleCloseModal5.bind(this);
+        
+        this.handleOpenModal6 = this.handleOpenModal6.bind(this);
+        this.handleCloseModal6 = this.handleCloseModal6.bind(this);
+        
+        this.handleOpenModal7 = this.handleOpenModal7.bind(this);
+        this.handleCloseModal7 = this.handleCloseModal7.bind(this);
+        
+        this.handleOpenModal8 = this.handleOpenModal8.bind(this);
+        this.handleCloseModal8 = this.handleCloseModal8.bind(this);
+        
+        this.handleOpenModal9 = this.handleOpenModal9.bind(this);
+        this.handleCloseModal9 = this.handleCloseModal9.bind(this);
     }
-  
-  handleOpenModal () {
-    this.setState({ showModal: true });
-  }
-  
-  handleCloseModal () {
-    this.setState({ showModal: false });
-  }
+   
+    handleOpenModal1 () { this.setState({ showModal1: true });}
+    handleCloseModal1 () { this.setState({ showModal1: false });}
+
+    handleOpenModal2 () { this.setState({ showModal2: true });}
+    handleCloseModal2 () { this.setState({ showModal2: false });}
+
+    handleOpenModal3 () { this.setState({ showModal3: true });}
+    handleCloseModal3 () { this.setState({ showModal3: false });}
+
+    handleOpenModal4 () { this.setState({ showModal4: true });}
+    handleCloseModal4 () { this.setState({ showModal4: false });}
+
+    handleOpenModal5 () { this.setState({ showModal5: true });}
+    handleCloseModal5 () { this.setState({ showModal5: false });}
+
+    handleOpenModal6 () { this.setState({ showModal6: true });}
+    handleCloseModal6 () { this.setState({ showModal6: false });}
+
+    handleOpenModal7 () { this.setState({ showModal7: true });}
+    handleCloseModal7 () { this.setState({ showModal7: false });}
+
+    handleOpenModal8 () { this.setState({ showModal8: true });}
+    handleCloseModal8 () { this.setState({ showModal8: false });}
+
+    handleOpenModal9 () { this.setState({ showModal9: true });}
+    handleCloseModal9 () { this.setState({ showModal9: false });}
+
 
     render()
-    {
-
+    { 
         return(
         <div className="commit-main">
             <div className="page-desc-path" id="top-link-part">
@@ -101,10 +145,10 @@ class CommunityFair extends Component
                 <button className="btn-secondary btn-width">VIEW INTERACTIVE MAP</button>
                 </div>
             </div>
-                    
+
             <div className="text-on-hover-wrapper">
                 <div className="row nopadding2">
-                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal} >
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal1} >
                         <img src="https://assets.thebodyshop.com/medias/29558967631902.jpg?context=images/h0e/h51/29558967631902.jpg" />                
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -113,10 +157,10 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
-                    <ReactModal id="Community_Trade" isOpen={this.state.showModal} onRequestClose={this.handleCloseModal} className="modal-container" >
+                    <ReactModal id="Community_Trade" isOpen={this.state.showModal1} onRequestClose={this.handleCloseModal1} className="modal-container" >
                             <div className="modal-container-box">
                                 <div className="close-button-modal-container">
-                                    <button className="close-button-modal" onClick={this.handleCloseModal}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                    <button className="close-button-modal" onClick={this.handleCloseModal1}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
                                 </div>
                                 <div>
                                     <div className="modal-image-container">
@@ -131,8 +175,8 @@ class CommunityFair extends Component
                                 </div>
                             </div>
                     </ReactModal>
-                 
-                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal}>
+
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal2}>
                         <img src ="https://assets.thebodyshop.com/medias/29558968090654.jpg?context=images/ha0/h5c/29558968090654.jpg" />
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -142,10 +186,10 @@ class CommunityFair extends Component
                         </div>
                     </div>
                     
-                    <ReactModal  isOpen={this.state.showModal} onRequestClose={this.handleCloseModal} className="modal-container" >
+                    <ReactModal  isOpen={this.state.showModal2} onRequestClose={this.handleCloseModal2} className="modal-container" >
                             <div className="modal-container-box">
                                 <div className="close-button-modal-container">
-                                    <button className="close-button-modal" onClick={this.handleCloseModal}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                    <button className="close-button-modal" onClick={this.handleCloseModal2}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
                                 </div>
                                 <div>
                                     <div className="modal-image-container">
@@ -153,15 +197,15 @@ class CommunityFair extends Component
                                     </div>
                                     <div className="modal-text-container">
                                         <h2>1989</h2>
-                                        <p>Community Trade</p>
+                                        <p>Paper</p>
                                         <br />
-                                        <p>Our pioneering Community Fair Tradeprogramme started when The Body Shopstarted sourcing ‘footsie’ massage rollersfrom an education and employment charityin India, which became a best-selling line. </p>
+                                        <p>We bought Nepalese sustainable paper gifts made from plants clogging local waterways, leading to new employment for people and seed funding for community projects</p>
                                     </div>
                                 </div>
                             </div>
                     </ReactModal>
 
-                    <div className="col-md-3 image-with-text-transist nopadding2">
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal3}>
                         <img src ="https://assets.thebodyshop.com/medias/29558976741406.jpg?context=images/he6/h6a/29558976741406.jpg" />
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -170,8 +214,26 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
+                    <ReactModal  isOpen={this.state.showModal3} onRequestClose={this.handleCloseModal3} className="modal-container" >
+                            <div className="modal-container-box">
+                                <div className="close-button-modal-container">
+                                    <button className="close-button-modal" onClick={this.handleCloseModal3}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                </div>
+                                <div>
+                                    <div className="modal-image-container">
+                                        <img className="modal-image" src="https://assets.thebodyshop.com/medias/29558976741406.jpg?context=images/he6/h6a/29558976741406.jpg"/>                
+                                    </div>
+                                    <div className="modal-text-container">
+                                        <h2>1993</h2>
+                                        <p>Sesame Seed Oil</p>
+                                        <br />
+                                        <p>We sourced our first Community Fair Trade ingredient – sesame seed oil</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </ReactModal>
 
-                    <div className="col-md-3 image-with-text-transist nopadding2">
+                    <div className="col-md-3 image-with-text-transist nopadding2"onClick={this.handleOpenModal4}>
                         <img src ="https://assets.thebodyshop.com/medias/29558975004702.jpg?context=images/h64/h19/29558975004702.jpg" />
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -180,10 +242,28 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
-                </div>
+                    <ReactModal  isOpen={this.state.showModal4} onRequestClose={this.handleCloseModal4} className="modal-container" >
+                            <div className="modal-container-box">
+                                <div className="close-button-modal-container">
+                                    <button className="close-button-modal" onClick={this.handleCloseModal4}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                </div>
+                                <div>
+                                    <div className="modal-image-container">
+                                        <img className="modal-image" src="https://assets.thebodyshop.com/medias/29558975004702.jpg?context=images/h64/h19/29558975004702.jpg" />                
+                                    </div>
+                                    <div className="modal-text-container">
+                                        <h2>1998</h2>
+                                        <p>Shea Butter</p>
+                                        <br />
+                                        <p>Anita discovered shea butter from Tamale, northern Ghana</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </ReactModal>
+                </div> 
 
                 <div className="row nopadding2">
-                    <div className="col-md-3 image-with-text-transist nopadding2">
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal5}>
                         <img src ="https://assets.thebodyshop.com/medias/29558975660062.jpg?context=images/he4/h70/29558975660062.jpg" />
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -192,8 +272,26 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
+                    <ReactModal  isOpen={this.state.showModal5} onRequestClose={this.handleCloseModal5} className="modal-container" >
+                            <div className="modal-container-box">
+                                <div className="close-button-modal-container">
+                                    <button className="close-button-modal" onClick={this.handleCloseModal5}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                </div>
+                                <div>
+                                    <div className="modal-image-container">
+                                        <img className="modal-image" src="https://assets.thebodyshop.com/medias/29558975660062.jpg?context=images/he4/h70/29558975660062.jpg" />                
+                                    </div>
+                                    <div className="modal-text-container">
+                                        <h2>2007</h2>
+                                        <p>Supply Chain Award </p>
+                                        <br />
+                                        <p>We were awarded ‘The Big Tick’ Business In The Community Supply Chain Award</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </ReactModal>
 
-                    <div className="col-md-3 image-with-text-transist nopadding2">
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal6}>
                         <img src ="https://assets.thebodyshop.com/medias/29558975856670.jpg?context=images/h0b/h76/29558975856670.jpg" />
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -202,8 +300,26 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
+                    <ReactModal  isOpen={this.state.showModal6} onRequestClose={this.handleCloseModal6} className="modal-container" >
+                            <div className="modal-container-box">
+                                <div className="close-button-modal-container">
+                                    <button className="close-button-modal" onClick={this.handleCloseModal6}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                </div>
+                                <div>
+                                    <div className="modal-image-container">
+                                        <img className="modal-image" src="https://assets.thebodyshop.com/medias/29558975856670.jpg?context=images/h0b/h76/29558975856670.jpg" />                
+                                    </div>
+                                    <div className="modal-text-container">
+                                        <h2>2008</h2>
+                                        <p>Alcohol</p>
+                                        <br />
+                                        <p>We were the first to use fair trade organic alcohol in cosmetics</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </ReactModal>
 
-                    <div className="col-md-3 image-with-text-transist nopadding2">
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal7}>
                         <img src ="https://assets.thebodyshop.com/medias/29558975922206.jpg?context=images/h72/h18/29558975922206.jpg" />
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -212,8 +328,26 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
+                    <ReactModal  isOpen={this.state.showModal7} onRequestClose={this.handleCloseModal7} className="modal-container" >
+                            <div className="modal-container-box">
+                                <div className="close-button-modal-container">
+                                    <button className="close-button-modal" onClick={this.handleCloseModal7}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                </div>
+                                <div>
+                                    <div className="modal-image-container">
+                                        <img className="modal-image" src="https://assets.thebodyshop.com/medias/29558975922206.jpg?context=images/h72/h18/29558975922206.jpg" />                
+                                    </div>
+                                    <div className="modal-text-container">
+                                        <h2>2009</h2>
+                                        <p>Ecocert</p>
+                                        <br />
+                                        <p>Our Community Trade programme has been verified by third party organisations since 2009. Since 2017 our programme has been verified by Ecocert.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </ReactModal>
 
-                    <div className="col-md-3 image-with-text-transist nopadding2">
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal8}>
                         <img src ="https://assets.thebodyshop.com/medias/29558975987742.jpg?context=images/h3c/hf8/29558975987742.jpg" />
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -222,10 +356,28 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
+                    <ReactModal  isOpen={this.state.showModal8} onRequestClose={this.handleCloseModal8} className="modal-container" >
+                            <div className="modal-container-box">
+                                <div className="close-button-modal-container">
+                                    <button className="close-button-modal" onClick={this.handleCloseModal8}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                </div>
+                                <div>
+                                    <div className="modal-image-container">
+                                        <img className="modal-image" src="https://assets.thebodyshop.com/medias/29558975987742.jpg?context=images/h3c/hf8/29558975987742.jpg" />                
+                                    </div>
+                                    <div className="modal-text-container">
+                                        <h2>2011</h2>
+                                        <p>Global Shea Alliance</p>
+                                        <br />
+                                        <p>We helped establish the Global Shea Alliance, bringing industry members together to improve benefits for producers and increase the number of women involved in the trade</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </ReactModal>
                 </div>
-
+                
                 <div className="row nopadding2">
-                    <div className="col-md-3 image-with-text-transist nopadding2">
+                    <div className="col-md-3 image-with-text-transist nopadding2" onClick={this.handleOpenModal9}>
                         <img src ="https://assets.thebodyshop.com/medias/29558976806942.jpg?context=images/h76/hf7/29558976806942.jpg" />
                         <div className="transist-contentbox contentbox-alignment">
                             <div className="textbox-alignment">
@@ -234,6 +386,25 @@ class CommunityFair extends Component
                             </div>
                         </div>
                     </div>
+                    <ReactModal  isOpen={this.state.showModal9} onRequestClose={this.handleCloseModal9} className="modal-container" >
+                            <div className="modal-container-box">
+                                <div className="close-button-modal-container">
+                                    <button className="close-button-modal" onClick={this.handleCloseModal9}><img src="https://assets.thebodyshop.com/_ui/responsive/theme-tbs/assets/svg/icon-close-white.svg"  /></button>
+                                </div>
+                                <div>
+                                    <div className="modal-image-container">
+                                        <img className="modal-image" src="https://assets.thebodyshop.com/medias/29558976806942.jpg?context=images/h76/hf7/29558976806942.jpg" />                
+                                    </div>
+                                    <div className="modal-text-container">
+                                        <h2>2013</h2>
+                                        <p>Supply Chain Award</p>
+                                        <br />
+                                        <p>BITC named The Body Shop International Responsible Business 2013, based on our Community Fair Trade programme</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </ReactModal>
+
                 </div>
             </div>
         </div>
