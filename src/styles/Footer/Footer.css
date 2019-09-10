@@ -1,53 +1,59 @@
 
-.footer-region-1
-{
-padding: 0 48px;
-margin: 0 auto;
-max-width: 1368px;
-}
+    .footer-region-1
+    {
+        padding: 0 48px;
+        margin: 0 auto;
+        max-width: 1368px;
+    }
 
+
+@media(max-width:1024px){
+    .footer-region-1
+    {
+    padding: 0 15px;
+    padding-top:25px
+    }
+}
 .footer-region-2
 {
  margin-left : 30px;   
 }
 
 .sticky-footer {
-        top: 0;
+        top: 10px;
         left: 0;
         margin: 0;
         padding: 0;
         display: block;
         position: relative;
         border: 0;
-        z-index: 1000;
         background: #f7f7f7;
 }
 
 
-.footer-text
-{ letter-spacing: 1px;
+.footer-text{ 
+    letter-spacing: 1px;
     font-weight: 400;
- font-family: InterstateRegularCondensed;
- font-size: 14px;
- line-height: 70px;
- text-align: right;
+    font-family: InterstateRegularCondensed;
+    font-size: 14px;
+    line-height: 70px;
+    text-align: right;
 }
 
 
-.footer-text-2
-{
+.footer-text-2{
     font-weight: 400;
- font-family: InterstateRegularCondensed;
- font-size: 14px;
- line-height: 26px;
+    font-family: InterstateRegularCondensed;
+    font-size: 14px;
+    line-height: 26px;
 }
 
-.footer-text-3
-{text-transform: uppercase;
- font-weight: 400;
- font-family: InterstateRegularCondensed;
- font-size: 14px;
- line-height: 22px;
+.footer-text-3{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: InterstateRegularCondensed;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 .footer-text-4
@@ -80,7 +86,7 @@ max-width: 1368px;
 .footer-btn-live {
     height: 50px;
     width: 125px;
-    background: url('D:/dev/BodyShop/Workspace/BodyShop/src/assets/Footer Icon/bshead2.png');
+    background: url('../../assets/footerIcons/bshead2.png');
     border: #484848 solid 2px;
     color: #111111;
     font-family: interstateBold;
@@ -90,7 +96,7 @@ max-width: 1368px;
     background-size: 100%;
   }
   .footer-btn-live:hover {
-    background: url('D:/dev/BodyShop/Workspace/BodyShop/src/assets/Footer Icon/bshead1.png');
+    background: url('../../assets/footerIcons/bshead1.png');
     /*height: 66px;*/
     color: #f7f7f7;
   }
@@ -154,14 +160,4 @@ max-width: 1368px;
     .tab{
         text-align: center
     }
-}
-
-.dropdown
-{
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 400;
-    font-family: InterstateRegularCondensed;
-    border: none;
-    width: 30%;
 }

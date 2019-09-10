@@ -12,7 +12,7 @@ import '../../styles/App.css';
 import { Route, Link, Switch } from 'react-router-dom'
 import Home from './Home/Home';
 import Login from './Login/Login';
-import Register from './Register/Register';
+// import Register from './Register/RegisterForm';
 
 //import StoreLocator from './StoreLocator/store-locator';
 import { BrowserRouter } from 'react-router-dom';
@@ -22,7 +22,6 @@ import en from "react-intl/locale-data/en";
 import ar from "react-intl/locale-data/ar"
 import cookie from 'react-cookies';
 import Axios from 'axios';
-import LangPopup from '../components/HOC/LangPopup';
 import ScrollToTop from '../components/HOC/ScrollToTop';
 
 import { setChangeStore } from '../redux/actions/globals';
@@ -162,32 +161,8 @@ class App extends Component {
   }
 
   handleLanguageSelection = (language) => {
-    //console.log('In App Lang sel');
-
-    let country;
-    //country = (cookie.load('country') === null) ? 'KSA' : cookie.load('country');
-
-    if ((cookie.load('country') === null) || (cookie.load('country') === "undefined")) {
-      country = 'KSA';
-    } else {
-      country = cookie.load('country');
-    }
-    this.getStoreId(country, language);
-    this.handleDir(language);
-  }
-
-  handleCountrySelection = (country) => {
-    //console.log('In App country sel',country);
-
-    let language;
-    // language = (cookie.load('language') === null) ? 'ar' : cookie.load('language');
-    if ((cookie.load('language') === null) || (cookie.load('language') === "undefined")) {
-      language = 'ar';
-    } else {
-      language = cookie.load('language');
-    }
-
-    this.getStoreId(country, language);
+    localStorage.setItem('templang', language);
+   // this.getStoreId(country, language);
     this.handleDir(language);
   }
 
@@ -276,16 +251,14 @@ class App extends Component {
             <BrowserRouter>
               <ScrollToTop>
                 <>
-                  {/* <Header /> */}
-                  <Header handleLanguageSelection={this.handleLanguageSelection} handleCountrySelection={this.handleCountrySelection} />
+                  <Header handleLanguageSelection={this.handleLanguageSelection} />
                   <Switch>
                     <Route path="/home" component={Home} />
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={Login} />
-                    <Route exact path="/register" component={Register} />
+                    {/* <Route exact path="/register" component={Register} /> */}
                   </Switch>
                   <Footer />
-
                 </>
               </ScrollToTop>
             </BrowserRouter>
@@ -296,4 +269,4 @@ class App extends Component {
   }
 }
 
-export default LangPopup({})(App);
+export default App;

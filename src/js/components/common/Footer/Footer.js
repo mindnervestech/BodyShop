@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import '../../../../styles/Footer/Footerstyle.css';
+import '../../../../styles/Footer/Footer.css';
 import '../../../../styles/App.css';
 import { FormattedMessage } from 'react-intl';
-import twitter from '../../../../assets/Footer Icon/twitter.webp'
-import youtube from '../../../../assets/Footer Icon/icon-youtube.svg'
-import snapchat from '../../../../assets/Footer Icon/icon-snapchat.svg'
-import facebook from '../../../../assets/Footer Icon/icon-facebook.svg'
-import instagram from '../../../../assets/Footer Icon/InstagramLogov4.webp'
+import twitter from '../../../../assets/footerIcons/twitter.webp'
+import youtube from '../../../../assets/footerIcons/icon-youtube.svg'
+import snapchat from '../../../../assets/footerIcons/icon-snapchat.svg'
+import facebook from '../../../../assets/footerIcons/icon-facebook.svg'
+import instagram from '../../../../assets/footerIcons/InstagramLogov4.webp'
+import cards from '../../../../assets/footerIcons/cards.png'
 
 class Footer extends Component {
-
-
-  
   render() {
     return (
       <div className="footer-region-1">
@@ -133,15 +131,17 @@ class Footer extends Component {
         </p>
       </div>
       <div className="col-md-3 nopadding">
-       <div>
+        <div>
          <select className="dropdown">
-           <option value="SAUDI">SAUDI</option>
-           <option value="DUBAI">DUBAI</option>
-           <option value="KUWAIT">KUWAIT</option>
-           <option value="IRAN">IRAN</option>
-           
+           <option value="A" >AAAAA</option>
+           <option value="B" >BBBBB</option>
+           <option value="C" >CCCCC</option>
+           <option value="D" >DDDDD</option>
          </select>
-       </div>
+        <div>
+         <img src ={cards} />
+        </div>
+      </div>
       </div>
     </div>
   </div>  

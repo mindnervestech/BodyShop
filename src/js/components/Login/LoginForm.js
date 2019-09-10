@@ -28,6 +28,7 @@ class LoginForm extends Component {
                             <Col md="10" className="text-align-left pt-4 pl-4">
                                 <FormGroup>
                                     <Label for="loginEmailLabel"><b><FormattedMessage id="login.email" defaultMessage="Email address" /></b></Label>
+
                                     <Input type="email" name="email" value={this.state.email} size="40" maxLength="100" onChange={this.onChangeCredintials}/>
                                 </FormGroup>
                             </Col>
@@ -49,6 +50,7 @@ class LoginForm extends Component {
                             <Col md="1"></Col>
                             <Col md="10" className="text-align-left register-link pl-4">
                                 <a  className="register-info" href="#"><FormattedMessage id="login.forgotPassword" defaultMessage="Forgot your password?" /></a>
+
                             </Col>
                             <Col md="1"></Col>
                         </Row>
@@ -57,6 +59,7 @@ class LoginForm extends Component {
                             <Col md="1"></Col>
                             <Col md="10" className="text-align-left pt-4 pl-4">
                                 <Button className="btn-grey" size="md" block onClick={() => this.props.login(this.state.email, this.state.password)}><FormattedMessage id="login.loginBtn" defaultMessage="LOGIN" /></Button>
+
                             </Col>
                             <Col md="1"></Col>
                         </Row>

@@ -5,6 +5,27 @@
     "header.theBodyShopAtHome": "The Body Shop At Home ™",
     "header.customerCare": "Customer Care",
     "header.hiThere": "Hi there",
+    "header.menu.trending": "TRENDING",
+    "header.menu.face": "FACE",
+    "header.menu.body": "BODY",
+    "header.menu.hair": "HAIR",
+    "header.menu.makeup": "MAKEUP",
+    "header.menu.fragrance": "FRAGRANCE",
+    "header.menu.gifts": "GIFTS",
+    "header.menu.range": "RANGE",
+    "header.menu.tipsAdvice": "TIPS & ADVICE",
+    "header.menu.aboutUs": "ABOUT US",
+
+    "header.secondaryMenu.usefulInformation": "USEFUL INFORMATION",
+    "header.secondaryMenu.helpAndFaqs": "HELP & FAQS",
+    "header.secondaryMenu.liveChat": "LIVE CHAT",
+    "header.secondaryMenu.deliveryInformation": "DELIVERY INFORMATION",
+    "header.secondaryMenu.termsAndConditions": "TERMS AND CONDITIONS",
+    "header.secondaryMenu.loyaltyClub": "LOYALTY CLUB",
+    "header.secondaryMenu.studentDiscounts": "STUDENT DISCOUNTS",
+    "header.secondaryMenu.cookies": "COOKIES",
+    "header.secondaryMenu.taxStrategy": "TAX STRATEGY",
+    "header.secondaryMenu.privacyNotice": "PRIVACY NOTICE",
 
     "footer.joinus": "JOIN US ON SOCIAL",
     "footer.signup": "SIGN UP FOR OUR EXCLUSIVE OFFERS",
@@ -88,15 +109,34 @@
     "register.validation.lastName.onlyletters" : "Last Name should contain letters only",
     "register.validation.email.invalid" : "Email address is not valid",
     "register.validation.password.notMatched" : "Passwords not matched"
-
   },
-
   "ar": {
     "home.Title": "الصفحة الرئيسية",
     "header.stores": "",
     "header.theBodyShopAtHome": "",
     "header.customerCare": "",
     "header.hiThere": "",
+    "header.menu.trending": "",
+    "header.menu.face": "",
+    "header.menu.body": "",
+    "header.menu.hair": "",
+    "header.menu.makeup": "",
+    "header.menu.fragrance": "",
+    "header.menu.gifts": "",
+    "header.menu.range": "",
+    "header.menu.TipsAdvice": "",
+    "header.menu.aboutUs": "",
+
+    "header.secondaryMenu.usefulInformation": "",
+    "header.secondaryMenu.helpAndFaqs": "",
+    "header.secondaryMenu.liveChat": "",
+    "header.secondaryMenu.deliveryInformation": "",
+    "header.secondaryMenu.termsAndConditions": "",
+    "header.secondaryMenu.loyaltyClub": "",
+    "header.secondaryMenu.studentDiscounts": "",
+    "header.secondaryMenu.cookies": "",
+    "header.secondaryMenu.taxStrategy": "",
+    "header.secondaryMenu.privacyNotice": "",
 
     "footer.joinus": "",
     "footer.signup": "",
@@ -129,7 +169,16 @@
     "footer.trademark1": "",
     "footer.trademark2": "",
     "footer.live": "",
-    "footer.time": ""
+    "footer.time": "",
+    "home.bestseller": "",
+    "home.statictext1": "",
+    "home.statictext2": "",
+    "home.statictext3": "",
+    "home.statictext4": "",
+    "home.signin": "",
+    "home.loveBody": "",
+    "home.community": "",
+    "home.readMore": "",
 
     "login.Title" : "",
     "login.LoginButton" : "",
@@ -169,6 +218,5 @@
     "register.validation.lastName.onlyletters" : "",
     "register.validation.email.invalid" : "",
     "register.validation.password.notMatched" : ""
-
   }
 }

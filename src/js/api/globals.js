@@ -4,13 +4,13 @@ export const live = true;
 export const active_server = 'dev';
 
 export const ROOT_URL = {
-    dev: 'http://nayomidev.iksulalive.com/',
-    live: 'https://nayomim2live.iksulalive.com/'
+    dev: 'https://tbs-dev.iksulalive.com/',
+    live: 'https://tbs-dev.iksulalive.com/'
 };
 
 export const WEB_URL_ALL = {
-    dev: `http://nayomijsuat.iksulalive.com/`,
-    live: `https://nayomireact.iksulalive.com/`,
+    dev: `https://tbs-dev.iksulalive.com/`,
+    live: `https://tbs-dev.iksulalive.com/`,
 }
 
 export const WEB_URL = WEB_URL_ALL[active_server];

@@ -140,8 +140,6 @@ class RegisterForm extends Component {
 	    this.props.register(data);
 	}
 
-	
-
 	render() {
 		return(
 			<div>
@@ -365,4 +363,5 @@ class RegisterForm extends Component {
 		);
 	}
 }
+
 export default RegisterForm;
