@@ -7,6 +7,8 @@ import { Link, Redirect } from 'react-router-dom';
 import iconNavLeft from '../../../../../src/assets/images/icons/icon-nav-left.png';
 import iconNavRight from '../../../../../src/assets/images/icons/icon-nav-right.png';
 import iconCloseWhite from '../../../../../src/assets/images/icons/icon-close-white.png';
+import searchIcon from '../../../../../src/assets/images/icons/icon-search.svg';
+import iconClose from '../../../../../src/assets/images/icons/icon-close.svg';
 
 class Header extends Component {
     constructor(props) {
@@ -128,6 +130,14 @@ class Header extends Component {
         document.getElementById('menuSubcategories').style.display = 'none';
     }
 
+    openSignUpPopup() {
+        document.getElementById('my-account-tooltip').style.display = 'block';
+    }
+
+    closeSignUpPopup() {
+        document.getElementById('my-account-tooltip').style.display = 'none';
+    }
+
   render() {
     return (
         <div className="main" id="mainDiv">
@@ -164,13 +174,22 @@ class Header extends Component {
                         </div>
                         <div className="sticky-header-col sticky-header-col-three">
                             <ul className="ulStyle">
-                                <li className="content headerUserGreeting"><FormattedMessage id="header.hiThere" /> xyzqwertyyuu</li>
-                                <li className="content">
-                                    <a title="Click to open your account">
-                                        <span className="icons my-account"></span>
-                                    </a>
-                                    <div id="my-account-tooltip">
-
+                                <Link to={`/login`} style={{color:'#111'}}>
+                                <li className="content headerUserGreeting" style={{cursor:'pointer'}}><FormattedMessage id="header.hello" /> <FormattedMessage id="header.signin" /></li>
+                                </Link>
+                                {/* <li className="content headerUserGreeting"><FormattedMessage id="header.hiThere" /> xyzqwertyyuu</li> */}
+                                <li className="content" onMouseOver={() => this.openSignUpPopup()}>
+                                    <Link className="logo" to={`/login`}>
+                                        <a title="Click to open your account">
+                                            <span className="icons my-account"></span>
+                                        </a>
+                                    </Link>
+                                    <div id="my-account-tooltip" className="account-tooltip" onMouseLeave={() => this.closeSignUpPopup()} style={{display:'none'}}>
+                                        <p className="account-msg">You are now logged in as:</p>
+                                        <p className="account-name">user name</p>
+                                        <p className="account-email">user.name@gmail.com</p>
+                                        <a className="button">My account</a>
+                                        <a className="button">Sign out</a>
                                     </div>
                                 </li>
                                 <li className="content">
@@ -505,13 +524,29 @@ class Header extends Component {
                                         </li>
                                     </ul>
                                 </nav>
+                                <div className="search-toggler" style={{display:'none'}}>
+                                    <span className="wrapper-search-bar">
+                                        <a>
+                                            <span className="place-holder-text"><FormattedMessage id="header.menu.searchPlaceholder" /></span>
+                                            <span className="icon-header-search-desktop"></span>
+                                        </a>
+                                    </span>
+                                    <input type="hidden"></input>
+                                    <form className="autocomplete-wrapper">
+                                        <div className="input-wrapper">
+                                            <input type="text" />
+                                            <button className="search-icon">
+                                                <img className="svg loading" src={searchIcon} />
+                                            </button>
+                                            <a>
+                                                <img className="svg loading" src={iconClose} />
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    {/* <div className="search-toggler">
-                            <input type="text" className="searchBoxStyle" />
-                       
-                    </div> */}
                     <p class="delivery-return-msg-desktop">Enjoy free delivery over £25*</p>
                 </div>
             </div>

@@ -2,9 +2,11 @@
   "en": {
     "home.Title": "Home Page",
     "header.stores": "Stores",
-    "header.theBodyShopAtHome": "The Body Shop At Home ™",
+    "header.theBodyShopAtHome": "Love Your Body Club",
     "header.customerCare": "Customer Care",
     "header.hiThere": "Hi there",
+    "header.hello": "Hello",
+    "header.signin": "Sign in",
     "header.menu.trending": "TRENDING",
     "header.menu.face": "FACE",
     "header.menu.body": "BODY",
@@ -15,6 +17,7 @@
     "header.menu.range": "RANGE",
     "header.menu.tipsAdvice": "TIPS & ADVICE",
     "header.menu.aboutUs": "ABOUT US",
+    "header.menu.searchPlaceholder": "Type to Search...",
 
     "header.secondaryMenu.usefulInformation": "USEFUL INFORMATION",
     "header.secondaryMenu.helpAndFaqs": "HELP & FAQS",
@@ -70,7 +73,7 @@
     "home.loveBody": "LOVE YOUR BODY™ CLUB",
     "home.community": "COMMUNITY TRADE RECYCLED PLASTICS",
     "home.readMore": "READ MORE",
-    "home.view": "VIEW",
+
     "login.Title" : "LOGIN OR REGISTER",
     "login.Login" : "LOGIN",
     "login.Register" : "REGISTER",
@@ -80,6 +83,7 @@
     "login.loginBtn" : "LOGIN",
     "login.notRegisteredYet" : "Not registered yet?",
     "login.registerNow" : "Register now",
+     "home.view": "VIEW",
     "register.title" : "Title",
     "register.firstName" : "FirstName",
     "register.lastName" : "LastName",
@@ -97,7 +101,7 @@
     "register.overAge" : "I confirm that I am over the age of 16 and have read and agreed to the",
     "register.register" : "REGISTER",
     "register.note" : "We will use your information to manage your account and requests and for research and analytics. We may share your information with trusted parties acting on our behalf and other The Body Shop companies. For further information on how we treat your personal information, please see our Privacy Notice",
-
+    
     "register.validation.firstName.empty" : "First Name cannot be empty",
     "register.validation.lastName.empty" : "Last Name cannot be empty",
     "register.validation.email.empty" : "Email address cannot be empty",
@@ -115,6 +119,8 @@
     "header.theBodyShopAtHome": "",
     "header.customerCare": "",
     "header.hiThere": "",
+    "header.hello": "",
+    "header.signin": "",
     "header.menu.trending": "",
     "header.menu.face": "",
     "header.menu.body": "",
@@ -125,6 +131,7 @@
     "header.menu.range": "",
     "header.menu.TipsAdvice": "",
     "header.menu.aboutUs": "",
+    "header.menu.searchPlaceholder": "",
 
     "header.secondaryMenu.usefulInformation": "",
     "header.secondaryMenu.helpAndFaqs": "",
