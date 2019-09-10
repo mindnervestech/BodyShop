@@ -16,6 +16,17 @@
     "header.menu.tipsAdvice": "TIPS & ADVICE",
     "header.menu.aboutUs": "ABOUT US",
 
+    "header.secondaryMenu.usefulInformation": "USEFUL INFORMATION",
+    "header.secondaryMenu.helpAndFaqs": "HELP & FAQS",
+    "header.secondaryMenu.liveChat": "LIVE CHAT",
+    "header.secondaryMenu.deliveryInformation": "DELIVERY INFORMATION",
+    "header.secondaryMenu.termsAndConditions": "TERMS AND CONDITIONS",
+    "header.secondaryMenu.loyaltyClub": "LOYALTY CLUB",
+    "header.secondaryMenu.studentDiscounts": "STUDENT DISCOUNTS",
+    "header.secondaryMenu.cookies": "COOKIES",
+    "header.secondaryMenu.taxStrategy": "TAX STRATEGY",
+    "header.secondaryMenu.privacyNotice": "PRIVACY NOTICE",
+
     "footer.joinus": "JOIN US ON SOCIAL",
     "footer.signup": "SIGN UP FOR OUR EXCLUSIVE OFFERS",
     "footer.helpcenter": "HERE TO HELP",
@@ -47,7 +58,19 @@
     "footer.trademark1": "® A registered trademark of The Body Shop International Limited; A trademark of The Body Shop International Limited All rights reserved.",
     "footer.trademark2": " Registered Office: Watersmead, Littlehampton, West Sussex, BN17 6LS, United Kingdom; Registered in England No. 1284170",
     "footer.live": "LIVE CHAT",
-    "footer.time": "MON TO SAT: 9AM - 9PM"
+    "footer.time": "MON TO SAT: 9AM - 9PM",
+    
+    
+    "home.bestseller": "OUR BESTSELLER",
+    "home.statictext1": "Our loyalty programme lets you earn points and enjoy rewards every time you shop, so it’s always a win-win when you’re in The Club.",
+    "home.statictext2": "The Club is free to join, and we love treating our members. Get a gift on your birthday, member offers, new product sneak peeks and invites to exclusive parties. ",
+    "home.statictext3": "At The Body Shop, we’re committed to tackling the plastic crisis differently. ",
+    "home.statictext4": " Not using plastic is not the only answer. If used responsibly it can be sustainable, so we need to show love for the plastic that we do use.  Discover how we’re fighting for people and the planet with Community Trade recycled plastic from Bengaluru, India.",
+    "home.signin": "SIGN IN/UP",
+    "home.loveBody": "LOVE YOUR BODY™ CLUB",
+    "home.community": "COMMUNITY TRADE RECYCLED PLASTICS",
+    "home.readMore": "READ MORE"
+
   },
   "ar": {
     "home.Title": "الصفحة الرئيسية",
@@ -65,6 +88,17 @@
     "header.menu.range": "",
     "header.menu.TipsAdvice": "",
     "header.menu.aboutUs": "",
+
+    "header.secondaryMenu.usefulInformation": "",
+    "header.secondaryMenu.helpAndFaqs": "",
+    "header.secondaryMenu.liveChat": "",
+    "header.secondaryMenu.deliveryInformation": "",
+    "header.secondaryMenu.termsAndConditions": "",
+    "header.secondaryMenu.loyaltyClub": "",
+    "header.secondaryMenu.studentDiscounts": "",
+    "header.secondaryMenu.cookies": "",
+    "header.secondaryMenu.taxStrategy": "",
+    "header.secondaryMenu.privacyNotice": "",
 
     "footer.joinus": "",
     "footer.signup": "",
@@ -97,6 +131,15 @@
     "footer.trademark1": "",
     "footer.trademark2": "",
     "footer.live": "",
-    "footer.time": ""
+    "footer.time": "",
+    "home.bestseller": "",
+    "home.statictext1": "",
+    "home.statictext2": "",
+    "home.statictext3": "",
+    "home.statictext4": "",
+    "home.signin": "",
+    "home.loveBody": "",
+    "home.community": "",
+    "home.readMore": ""
   }
 }
