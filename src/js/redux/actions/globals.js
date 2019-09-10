@@ -136,10 +136,11 @@ export const getHomePageData = (payload = {}) => {
         // dispatch(loadingSpinner({ loading: true }))
         let cb = {
             success: (res) => {
-                // console.log(res);
+               
                 localStorage.setItem('HomePageData', JSON.stringify(res));
 
                 if (res.status === true && res.code === 200) {
+                    console.log(",Home Page Respons",res);
                     dispatch(callActionForGetHomePageData({ home_page_data: res }))
 
                 } else {
