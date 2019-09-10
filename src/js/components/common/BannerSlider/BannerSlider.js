@@ -34,31 +34,29 @@ function LeftNavButton(props) {
     }
 
 
-    class BannerSlider extends Component{
-        render() {
-          const { bannerData } = this.props;
-          var settings = {
-            dots: true,
-            dotsClass: "slick-dots slick-thumbs",
-            infinite: true,
-            speed: 800,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 2500,
-            prevArrow: <LeftNavButton />,
-            nextArrow: <RightNavButton />,
-            responsive:[
-              { breakpoint:1025,
-                setting:{
-                  prevArrow: 0,
-                  nextArrow: 0
-                }
-              }
-            ]
-          }
-          
-          
+class BannerSlider extends Component{
+render() {
+  const { bannerData } = this.props;
+  var settings = {
+    dotsClass: "slick-dots slick-thumbs",
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    responsive:[
+      { breakpoint:1025,
+        setting:{
+          prevArrow: <LeftNavButton />,
+          nextArrow: <RightNavButton />,
+          dots: true,
+        }
+      }
+    ]
+  }
+  
+  
 
         return(
             <div>
