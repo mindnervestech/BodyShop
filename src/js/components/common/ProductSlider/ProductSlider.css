@@ -9,8 +9,9 @@
 }
 
 .product-images {
-    width: 275px ;
+    width: 80% ;
     height: auto;
+    align-self: center;
 }
 
 .product-names{
@@ -62,5 +63,12 @@
     right: 20
 }
 
+.slick-slide img{
+    display: inline;
+}
 
-
+@media(max-width:1024px){
+ .slick-arrow{
+     display: block !important;
+    }
+}

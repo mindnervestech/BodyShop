@@ -99,7 +99,8 @@ export const registerUser = (payload) => {
                     let newState = {
                         ...res,
                         isUserLoggedIn: res.status,
-                        loginMessage: res.message
+                        loginMessage: res.message,
+                        status: res.status
                     }
 
                     let registerUserDetails = {

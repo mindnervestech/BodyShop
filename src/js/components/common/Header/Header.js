@@ -4,12 +4,18 @@ import { withRouter } from 'react-router-dom'
 import '../../../../styles/Header/Header.css';
 import Input from '../../common/InputBox/Input.js';
 import { Link, Redirect } from 'react-router-dom';
+import iconNavLeft from '../../../../../src/assets/images/icons/icon-nav-left.png';
+import iconNavRight from '../../../../../src/assets/images/icons/icon-nav-right.png';
+import iconCloseWhite from '../../../../../src/assets/images/icons/icon-close-white.png';
+import searchIcon from '../../../../../src/assets/images/icons/icon-search.svg';
+import iconClose from '../../../../../src/assets/images/icons/icon-close.svg';
 
 class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            menuList: [],
+            selectedMenuName:""
         }
       }
 
@@ -45,23 +51,102 @@ class Header extends Component {
         this.props.handleLanguageSelection(lang, dir);
     }
 
+    openMobileMenubar() {
+        document.getElementById('mobileMenuBar').style.display = 'block';
+        document.getElementById('mobileMenuBar').style.left = '0px';
+        document.getElementById('pageOverlay').style.display = 'block';
+        // document.getElementsByClassName('home-main')[0].style.display = 'none';
+        // document.getElementsByClassName('footer-region-1')[0].style.display = 'none';
+        console.log(window.screen.availWidth);
+        if(window.screen.availWidth <1025 && window.screen.availWidth >= 768) {
+            document.getElementById('mainDiv').style.left = '50%';
+        }
+        if(window.screen.availWidth <= 767) {
+           
+            document.getElementById('mainDiv').style.left = '85%';
+            document.getElementById('mainDiv').style.height = '100vh';
+            document.getElementById('mobileNavWraper').style.height = '572px'
+        }
+        if(window.screen.availWidth >= 768 && window.screen.availWidth <= 1024) {
+            document.getElementById('mobileMenuBar').style.width = '33%';
+            document.getElementById('mainDiv').style.left = '50%';
+            document.getElementById('mainDiv').style.height = '100vh';
+            document.getElementById('mobileNavWraper').style.height = '920px'
+        }
+        //document.getElementById('mainDiv').style.left = '50%';
+    }
+    closeMenuBar() {
+        document.getElementById('mobileMenuBar').style.display = 'none';
+        document.getElementById('pageOverlay').style.display = 'none';
+        document.getElementById('mainDiv').style.left = '0';
+        document.getElementById('mainDiv').style.height = 'auto';
+        document.getElementById('mobileNavWraper').style.removeProperty('height');
+        // document.getElementsByClassName('home-main')[0].style.display = 'block';
+        // document.getElementsByClassName('footer-region-1')[0].style.display = 'block';
+    }
+
+    openSubmenu(menuName) {
+        console.log(menuName);
+        document.getElementById('menuCategories').style.display = 'none';
+        document.getElementById('menuSecondarySections').style.display = 'none';
+        document.getElementById('menuSubcategories').style.display = 'block';
+        this.setState({selectedMenuName:menuName});
+        if(menuName == 'trending') {
+            this.setState({menuList: ["shop trending","christmas sneak peak"]});
+        }
+        if(menuName == 'face') {
+            this.setState({menuList: ["by product type","by skin type","by skin concern","vegan"]});
+        }
+        if(menuName == 'bode') {
+            this.setState({menuList: ["by product type","by skin type","vegan"]});
+        }
+        if(menuName == 'hair') {
+            this.setState({menuList: ["by product type","by hair concern","vegan"]});
+        }
+        if(menuName == 'makeup') {
+            this.setState({menuList: ["by product type","this seasons trends","vegan"]});
+        }
+        if(menuName == 'fragrance') {
+            this.setState({menuList: ["by product type"," by recipient","home fragrance"]});
+        }
+        if(menuName == 'gifts') {
+            this.setState({menuList: ["by product type"," by price","by recipient","christmas gifts"]});
+        }
+        if(menuName == 'range') {
+            this.setState({menuList: ["range","tailored for men"]});
+        }
+        if(menuName == 'tipsAdvice') {
+            this.setState({menuList: ["skin care articles","body care articles","make-up articles","lifestyle articles","ingredient benefits","christmas ideas"]});
+        }
+        if(menuName == 'aboutUs') {
+            this.setState({menuList: ["who we are","loyalty program","sustainability","plastics","the body shop at home"]});
+        }
+        
+    }
+
+    openPrevMenu() {
+        document.getElementById('menuCategories').style.display = 'block';
+        document.getElementById('menuSecondarySections').style.display = 'block';
+        document.getElementById('menuSubcategories').style.display = 'none';
+    }
+
+    openSignUpPopup() {
+        document.getElementById('my-account-tooltip').style.display = 'block';
+    }
+
+    closeSignUpPopup() {
+        document.getElementById('my-account-tooltip').style.display = 'none';
+    }
+
   render() {
     return (
-        <div className="main">
+        <div className="main" id="mainDiv">
             <div className="main-inner">
                 <div className="sticky-header scroll-to-fixed-fixed" >
                     <header className="wrapper-global-header-desktop"></header>
                     <div className="sticky-header-row">
                         <div className="sticky-header-col sticky-header-col-one">
                         <ul className="ulStyle">
-                        <li class="content">
-                            <a href="javascript:void(0);" onClick={(e) => this.translate('en', 'ltr')}>
-                            <span class="text-store-finder">English</span>
-                            </a>
-                            <a href="javascript:void(0);" onClick={(e) => this.translate('ar', 'rtl')}>
-                            <span class="text-store-finder">| العربية</span>
-                            </a>
-                        </li>
                             <li class="content">
                                 <a aria-label="Store finder">
                                     <span class="icons store-finder"></span><span class="text-store-finder"><FormattedMessage id="header.stores" /></span> 
@@ -89,21 +174,41 @@ class Header extends Component {
                         </div>
                         <div className="sticky-header-col sticky-header-col-three">
                             <ul className="ulStyle">
-                                <li className="content headerUserGreeting"><FormattedMessage id="header.hiThere" /> xyzqwertyyuu</li>
-                                <li className="content">
-                                    <a>
-                                        <span className="icons my-account"></span>
-                                    </a>
+                                <Link to={`/login`} style={{color:'#111'}}>
+                                <li className="content headerUserGreeting" style={{cursor:'pointer'}}><FormattedMessage id="header.hello" /> <FormattedMessage id="header.signin" /></li>
+                                </Link>
+                                {/* <li className="content headerUserGreeting"><FormattedMessage id="header.hiThere" /> xyzqwertyyuu</li> */}
+                                <li className="content" onMouseOver={() => this.openSignUpPopup()}>
+                                    <Link className="logo" to={`/login`}>
+                                        <a title="Click to open your account">
+                                            <span className="icons my-account"></span>
+                                        </a>
+                                    </Link>
+                                    <div id="my-account-tooltip" className="account-tooltip" onMouseLeave={() => this.closeSignUpPopup()} style={{display:'none'}}>
+                                        <p className="account-msg">You are now logged in as:</p>
+                                        <p className="account-name">user name</p>
+                                        <p className="account-email">user.name@gmail.com</p>
+                                        <a className="button">My account</a>
+                                        <a className="button">Sign out</a>
+                                    </div>
                                 </li>
                                 <li className="content">
                                     <a>
                                         <span className="icons wish-list"></span>
                                     </a>
                                 </li>
-                                <li className="content last">
+                                <li className="content">
                                     <a>
                                         <span className="icons mini-basket"></span>
                                         <span className="basket-icon-circle">1</span>
+                                    </a>
+                                </li>
+                                <li className="content last">
+                                    <a href="javascript:void(0);" onClick={(e) => this.translate('en', 'ltr')}>
+                                        <span class="text-store-finder">English</span>
+                                    </a>
+                                    <a href="javascript:void(0);" onClick={(e) => this.translate('ar', 'rtl')}>
+                                        <span class="text-store-finder">| العربية</span>
                                     </a>
                                 </li>
                             </ul>
@@ -398,7 +503,6 @@ class Header extends Component {
                                         </li>
                                         <li className="section">
                                             <a className="menuitem"><FormattedMessage id="header.menu.hair" /></a>
-                                            
                                         </li>
                                         <li className="section">
                                             <a className="menuitem"><FormattedMessage id="header.menu.makeup" /></a>
@@ -420,13 +524,29 @@ class Header extends Component {
                                         </li>
                                     </ul>
                                 </nav>
+                                <div className="search-toggler" style={{display:'none'}}>
+                                    <span className="wrapper-search-bar">
+                                        <a>
+                                            <span className="place-holder-text"><FormattedMessage id="header.menu.searchPlaceholder" /></span>
+                                            <span className="icon-header-search-desktop"></span>
+                                        </a>
+                                    </span>
+                                    <input type="hidden"></input>
+                                    <form className="autocomplete-wrapper">
+                                        <div className="input-wrapper">
+                                            <input type="text" />
+                                            <button className="search-icon">
+                                                <img className="svg loading" src={searchIcon} />
+                                            </button>
+                                            <a>
+                                                <img className="svg loading" src={iconClose} />
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    {/* <div className="search-toggler">
-                            <input type="text" className="searchBoxStyle" />
-                       
-                    </div> */}
                     <p class="delivery-return-msg-desktop">Enjoy free delivery over £25*</p>
                 </div>
             </div>
@@ -436,7 +556,7 @@ class Header extends Component {
                         <div style={{height:34}}>
                             <ul className="row wrapper-sticky-search-toggle-mobile">
                                 <li className="col-header">
-                                    <a>
+                                    <a onClick={this.openMobileMenubar}>
                                         <span className="icons mobile-nav"></span>
                                     </a>
                                 </li>
@@ -474,14 +594,206 @@ class Header extends Component {
 
                         <div className="yCmsComponent megamenu_mobile">
                             <div className="dynamic-area"></div>
-                            <div className="main-navigation">
+                            <div className="main-navigation" id="mobileMenuBar">
+                                <div className="main-navigation-inner">
+                                    <div className="mobile-nav-wrapper" id="mobileNavWraper">
+                                        <div className="dynamic-area">
+                                            <div className="white-line-wrapper">
+                                                <div className="white-line">
 
+                                                </div>
+                                                <ul className="menu-items-list categories menu-mobile" id="menuCategories">
+                                                    <li className="menu-item ">
+                                                        <div className="mobile-nav-logo">
+                                                            <a className="logo">
+                                                                <img title="The Body Shop" src="https://assets.thebodyshop.com/medias/tbs-logo.svg?context=content-images/h4d/h7c/8796377514014/tbs-logo.svg" alt="The Body Shop" />
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('trending')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.trending" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('face')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.face" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('body')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.body" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('hair')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.hair" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('makeup')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.makeup" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('fragrance')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.fragrance" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('gifts')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.gifts" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('range')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.range" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('tipsAdvice')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.tipsAdvice" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item-category" onClick={() => this.openSubmenu('aboutUs')}>
+                                                        <a className="menu-item-title category-title">
+                                                            <span><FormattedMessage id="header.menu.aboutUs" /></span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <ul className="menu-items-list subcategories" id="menuSubcategories" style={{display:'none'}}>
+                                                    <li className="menu-item" onClick={() => this.openPrevMenu()}>
+                                                        <a className="nav-return">
+                                                            <img className="arrow arrow-left" src={iconNavLeft} />
+                                                            Go Back
+                                                        </a>
+                                                        <div className="nav-breadcrumb">
+                                                            <a>{this.state.selectedMenuName}</a>
+                                                        </div>
+
+                                                    </li>
+                                                    {
+                                                        this.state.menuList.map((name) =>
+                                                        <li className="menu-item subcategory">
+                                                            <a className="menu-item-title subcategory-title">
+                                                                <span>{name}</span>
+                                                                <img className="arrow arrow-right" src={iconNavRight} />
+                                                            </a>
+                                                        </li>
+                                                        )
+                                                    }
+                                                    
+                                                    {/* <li className="menu-item subcategory">
+                                                        <a className="menu-item-title subcategory-title">
+                                                            <span>Christmas Sneak Peak</span>
+                                                            <img className="arrow arrow-right" src={iconNavRight} />
+                                                        </a>
+                                                    </li> */}
+                                                </ul>
+                                                <ul className="menu-items-list secondary-sections" id="menuSecondarySections">
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        ------------ <FormattedMessage id="header.secondaryMenu.usefulInformation" /> ------------
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        <FormattedMessage id="header.secondaryMenu.helpAndFaqs" />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        <FormattedMessage id="header.secondaryMenu.liveChat" />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        <FormattedMessage id="header.secondaryMenu.deliveryInformation" />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        <FormattedMessage id="header.secondaryMenu.termsAndConditions" />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        <FormattedMessage id="header.secondaryMenu.loyaltyClub" />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        <FormattedMessage id="header.secondaryMenu.studentDiscounts" />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        <FormattedMessage id="header.secondaryMenu.cookies" />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        <FormattedMessage id="header.secondaryMenu.taxStrategy" />
+                                                        </a>
+                                                    </li>
+                                                    <li className="menu-item">
+                                                        <a className="menu-item-title secondary-section-title">
+                                                        <FormattedMessage id="header.secondaryMenu.privacyNotice" />
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mobile-nav-spacer"></div>
+                                    <div className="wrapper-mob-nav-sticky-links">
+                                        <div className="account-tooltip my-account-overlay-mobile">
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a className="my-account-trigger">
+                                                    <span className="icons my-account"></span>
+                                                    <span className="accessibility"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <span className="icons wish-list"></span>
+                                                    <span className="accessibility"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a>
+                                                    <span className="icons customer-care"></span>
+                                                    <span className="accessibility"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
                     </header>
                 </div>
                 <div className="sticky-header-mobile-spacer"></div>
+                <div className="page-overlay" id="pageOverlay" onClick={this.closeMenuBar} style={{display:'none'}}>
+                    <div className="close-overlay">
+                        <a onClick={this.closeMenuBar} style={{cursor:'pointer'}}>
+                            <img className="svg loading" src={iconCloseWhite} />
+                        </a>
+                    </div>
+                </div>
 
         </div>
     );

@@ -13,6 +13,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      errMsg: false,
       signUpState: 'login'
     }
   }
@@ -33,9 +34,26 @@ class Login extends Component {
     this.props.onLoginUser(payload);
   }
 
+  register = (data) => {
+    const payload = data;
+    this.props.onRegisterUserUser(payload);
+    this.setState({
+        errMsg : true
+    })
+    
+  }
+
   render() {
-    return (
-            <div className="text-align-center login paddingTopCustom">
+
+    
+    return (<div className="paddingTopCustom">
+              
+              <span className="error-message">
+
+              { (this.props.registerUserDetails.status == false && this.state.errMsgj ? this.props.registerUserDetails.message : '') }
+              
+              </span>
+              <div className="text-align-center login ">
                 <div className="display-inline login-container">
                     <div className="header4 title-size signup-title">
                         <span><FormattedMessage id="login.Title" defaultMessage="LOGIN OR REGISTER" /></span>
@@ -60,10 +78,12 @@ class Login extends Component {
                           <Col md="3"></Col>
                         </Row>
                         {this.state.signUpState == 'login' && <LoginForm login={this.login}/>}
-                        {this.state.signUpState == 'register' && <RegisterForm />}
+                        {this.state.signUpState == 'register' && <RegisterForm register={this.register} />}
+
                     </div>
                 </div>
             </div>
+          </div>
       );
   }
 }
@@ -74,13 +94,17 @@ const mapStateToProps = state => {
     customer_details: state.customer_details,
     login_error: state.invalidLogin,
     globals: state.global,
+    registerUserDetails : state.login.registerUserDetails
   };
 }
 
 const mapDispatchToProps = dispatch => {
   return {
       onLoginUser: (payload) => dispatch(actions.loginUser(payload)),
+
+      onRegisterUserUser: (payload) => dispatch(actions.registerUser(payload)),
   }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Login));
+
