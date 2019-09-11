@@ -5,30 +5,26 @@ import '../../../styles/App.css';
 import Promotions from '../common/Promotions/Promotions';
 import TextOnRight from '../common/TextOnRight/TextOnRight';
 import '../../../styles/homePage/homePage.css';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 import BannerSlider from '../common/BannerSlider/BannerSlider';
-import tabimg1 from '../../../assets/images/homePage/hometab1.webp';
-import tabimg2 from '../../../assets/images/homePage/hometab2.jpg';
-import tabimg3 from '../../../assets/images/homePage/hometab3.webp';
-import staticimg1 from '../../../assets/images/homePage/staticimg1.webp';
-import staticimg2 from '../../../assets/images/homePage/staticimg2.webp';
 import ProductSlider from '../common/ProductSlider/ProductSlider';
 import productImage1 from '../../../assets/images/homePage/productImage1.webp';
 import productImage2 from '../../../assets/images/homePage/productImage2.jpg';
 import productImage3 from '../../../assets/images/homePage/productImage3.webp';
 import productImage4 from '../../../assets/images/homePage/productImage4.webp';
 import productImage5 from '../../../assets/images/homePage/productImage5.jpg';
-import sliderimg1 from '../../../assets/images/homePage/slider1.jpg';
-import sliderimg2 from '../../../assets/images/homePage/slider2.webp';
-import sliderimg3 from '../../../assets/images/homePage/slider3.webp';
-import slidermob1 from '../../../assets/images/homePage/slidermob1.jpg';
-import slidermob2 from '../../../assets/images/homePage/slidermob2.jpg';
-import slidermob3 from '../../../assets/images/homePage/slidermob3.jpg';
-
+import {connect} from 'react-redux';
+import * as actions from '../../redux/actions/index';
 
 class Home extends Component {
   constructor(props) {
     super(props);
+    console.log("Props Data",props);
+  }
+
+  componentWillMount(){
+    console.log('wertyu',this.props);
+    this.props.onGetHomePageData({store:1});
   }
   render() {
     const dataProduct = [
@@ -63,39 +59,19 @@ class Home extends Component {
         link: ""
       }
     ]
-      
-  const dataPromo= [
-      {
-        url:tabimg1,
-        link:""
-      },
-      {
-        url:tabimg2,
-        link:""
-      },
-      {
-        url:tabimg3,
-        link:""
-      }
-    ]
+  
+  let dataPromo = {};
+  if (this.props.home_page_data.data) {
+    dataPromo = this.props.home_page_data.data.offersblock;
+    console.log('dataaPromoooooo', dataPromo);
+  }
 
-  const dataBanner=[
-    {
-      BLOCK_BANNER:sliderimg1,
-      BLOCK_MOBILE_BANNER:slidermob1,
-      BLOCK_URL:""
-    },
-    {
-      BLOCK_BANNER:sliderimg2,
-      BLOCK_MOBILE_BANNER:slidermob2,
-      BLOCK_URL:""
-    },
-    {
-      BLOCK_BANNER:sliderimg3,
-      BLOCK_MOBILE_BANNER:slidermob3,
-      BLOCK_URL:""
-    }
-  ]  
+  let dataBanner = {};
+  if (this.props.home_page_data.data) {
+    dataBanner = this.props.home_page_data.data.banners;
+    console.log('dataaaaaaaaa', dataBanner);
+  }
+
     return (
       <div className="home-main">
         
@@ -117,7 +93,7 @@ class Home extends Component {
         <br />
 
         <div>
-          <TextOnRight heading={<FormattedMessage id="home.loveBody" defaultmessage="LOVE YOUR BODY™ CLUB" />} text={<FormattedMessage id="home.statictext1" />} text2={<FormattedMessage id="home.statictext2" />} imageSrc={staticimg1} />
+          <TextOnRight heading={this.props.home_page_data.data.textblock1.title} text={this.props.home_page_data.data.textblock1.text} imageSrc={this.props.home_page_data.data.textblock1.image} />
         </div>
         <br />
 
@@ -129,7 +105,7 @@ class Home extends Component {
         <br />
 
         <div>
-          <TextOnRight heading={<FormattedMessage id="home.community" defaultmessage="COMMUNITY TRADE RECYCLED PLASTICS" />} text={<FormattedMessage id="home.statictext3" />} text2={<FormattedMessage id="home.statictext4" />} imageSrc={staticimg2} />
+          <TextOnRight heading={this.props.home_page_data.data.textblock2.title} text={this.props.home_page_data.data.textblock2.text} imageSrc={this.props.home_page_data.data.textblock2.image} />
         </div>
         <br />
         
@@ -142,4 +118,15 @@ class Home extends Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return{
+    home_page_data: state.global.home_page_data,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return{
+    onGetHomePageData: (payload) => dispatch(actions.getHomePageData(payload)),
+  }
+}
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
