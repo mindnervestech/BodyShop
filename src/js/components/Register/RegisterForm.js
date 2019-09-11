@@ -226,7 +226,7 @@ class RegisterForm extends Component {
 									                          maxlength: { value: 24, errorMessage: <FormattedMessage id="register.validation.password.invalid" defaultMessage="Password must be atleast 8 and 24 characters long" /> }
 									                        }}
                                                         />
-                                                        <span id="password-message-display" className="invalid-feedback"><FormattedMessage id="register.validation.password.minLength" defaultMessage="Password must be 8 and 24 characters long and must contain letters and numbers" /></span>
+                                                        <span id="password-message-display" className="invalid-feedback"><FormattedMessage id="register.validation.password.invalid" defaultMessage="Password must be 8 and 24 characters long and must contain letters and numbers" /></span>
                                                     </FormGroup>
 
                                                     <FormGroup>
@@ -234,7 +234,7 @@ class RegisterForm extends Component {
                                                         <AvField type="password" name="confirmPassword" id="registerConfirmPassword" value={this.state.confirmPassword} onChange={this.onChangeCredintials} onKeyUp={this.cpasswordKeyPress}
                                                         validate={{
 									                          required: { value: true, errorMessage: <FormattedMessage id="register.validation.password.empty" defaultMessage="Confirm Password cannot be empty" /> },
-									                          pattern: { value: /[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]$/, errorMessage: <FormattedMessage id="register.validation.password.invalid" defaultMessage="Passwords not matched" /> }
+									                          pattern: { value: /[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]$/, errorMessage: <FormattedMessage id="register.validation.password.notMatched" defaultMessage="Passwords not matched" /> }
 									                        }}
                                                         />
                                                         <span id="message-display" className="invalid-feedback"><FormattedMessage id="register.validation.password.notMatched" defaultMessage="Passwords not matched" /></span>
