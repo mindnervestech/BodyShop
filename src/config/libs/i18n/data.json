@@ -112,7 +112,11 @@
     "register.validation.firstName.onlyletters" : "First Name should contain letters only",
     "register.validation.lastName.onlyletters" : "Last Name should contain letters only",
     "register.validation.email.invalid" : "Email address is not valid",
-    "register.validation.password.notMatched" : "Passwords not matched"
+    "register.validation.password.notMatched" : "Passwords not matched",
+    "register.validation.password.invalid" : "Password must be 8 and 24 characters long and must contain letters and numbers",
+    "register.validation.firstName.invalid" : "First Name must be letters only",
+    "register.validation.lastName.invalid" : "Last Name must be letters only",
+    "register.validation.contactNumber.invalid" : "Mobile number is Invalid"
   },
   "ar": {
     "home.Title": "الصفحة الرئيسية",
@@ -225,6 +229,11 @@
     "register.validation.firstName.onlyletters" : "",
     "register.validation.lastName.onlyletters" : "",
     "register.validation.email.invalid" : "",
-    "register.validation.password.notMatched" : ""
+    "register.validation.password.notMatched" : "",
+    "register.validation.password.minLength" : "",
+    "register.validation.firstName.invalid" : "",
+    "register.validation.lastName.invalid" : "",
+    "register.validation.password.invalid" : "",
+    "register.validation.contactNumber.invalid" : ""
   }
 }

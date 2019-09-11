@@ -28,6 +28,8 @@ class RegisterForm extends Component {
 		        // 	lastName: false,
 		        // }
 		}
+
+		this.handleValidation = this.handleValidation.bind(this);
 	}
 
 	
@@ -42,79 +44,83 @@ class RegisterForm extends Component {
     		var pass = document.getElementById("registerPassword").value;
     		var cpass = document.getElementById("registerConfirmPassword").value;
 
+    		if(pass.length < 8 || pass.length > 24) 
+    			document.getElementById("password-message-display").style.display='block';
+    		else{
+    			if (!pass.match(/(?=^.{8,24}$)(?=.*\d)(?=.*[a-z])(?!.*\s)[0-9a-zA-Z!@#$%^&*()]*$$/)) 
+    				document.getElementById("password-message-display").style.display='block';
+	        	else
+	        		document.getElementById("password-message-display").style.display='none';
+    		}
+
     		if(cpass !=='') {
-				if(pass !== cpass) {
+				if(pass !== cpass) 
 					document.getElementById("message-display").style.display='block';
-				}
-				else {
+				else 
 					document.getElementById("message-display").style.display='none';
-				}
 			}
     }
 
 	handleSubmit = (e) => {
-		console.log('handle submit called');
-		e.preventDefault();
-		if(this.handleValidation()) {
-			// this.registerUser();
-			// console.log('enabled btn');
+		let result=this.handleValidation();
+		if(result) {
+			this.registerUser();
 		}
 	}
+	
+	handleValidation () {
+		let errors = {};
+		let { firstName, lastName, email, contactNumber, password, confirmPassword } = this.state;
+    	let formIsValid = true;
 
-	// handleValidation = () => {
-	// 	let errors = {};
-	// 	let fields = this.state.fields;
- //    	let formIsValid = true;
-
- //    	console.log('typeof fields["firstName"]',typeof fields["firstName"]);
     	
- //      	if (typeof fields["firstName"] !== "undefined") {
-	//         if (!fields["firstName"].match(/^[a-zA-Z ]*$/)) {
-	// 	          formIsValid = false;
-	// 	          errors["firstName"] = <FormattedMessage id="register.validation.firstName.invalid" defaultMessage="Please enter alphabet characters only." />;
-	//         }
-	//     }
+      	if (firstName !== "undefined") {
+	        if (!firstName.match(/^[a-zA-Z ]*$/)) {
+		          formIsValid = false;
+		          errors["firstName"] = <FormattedMessage id="register.validation.firstName.invalid" defaultMessage="Please enter alphabet characters only." />;
+	        }
+	    }
 
- //      	if (typeof fields["lastName"] !== "undefined") {
-	//         if (!fields["lastName"].match(/^[a-zA-Z ]*$/)) {
-	// 	          formIsValid = false;
-	// 	          errors["lastName"] = <FormattedMessage id="register.validation.lastName.invalid" defaultMessage="Please enter alphabet characters only." />;
-	//         }
-	//     }
+      	if (lastName !== "undefined") {
+	        if (lastName.match(/^[a-zA-Z ]*$/)) {
+		          formIsValid = false;
+		          errors["lastName"] = <FormattedMessage id="register.validation.lastName.invalid" defaultMessage="Please enter alphabet characters only." />;
+	        }
+	    }
 	    
-	//     if (typeof fields["email"] !== "undefined") {
-	//         //regular expression for email validation
-	//         var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-	//         if (!pattern.test(fields["email"])) {
-	//           formIsValid = false;
-	//           errors["email"] = <FormattedMessage id="register.validation.email.invalid" defaultMessage="Email address is not valid" />;
-	//         }
-	//      }
+	    if (email !== "undefined") {
+	        //regular expression for email validation
+	        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+	        if (!pattern.test(email)) {
+	          formIsValid = false;
+	          errors["email"] = <FormattedMessage id="register.validation.email.invalid" defaultMessage="Email address is not valid" />;
+	        }
+	     }
 	    
- //        if (typeof fields["contactNumber"] !== "undefined") {
-	//         if (!fields["contactNumber"].match(/^[0-9]{10}$/)) {
-	//           	formIsValid = false;
-	//           	errors["contactNumber"] = <FormattedMessage id="register.validation.contactNumber.invalid" defaultMessage="Mobile number is Invalid" />;
-	//         }
-	//     }
+        if (contactNumber !== "undefined") {
+	        if (contactNumber.match(/^[0-9]{10}$/)) {
+	          	formIsValid = false;
+	          	errors["contactNumber"] = <FormattedMessage id="register.validation.contactNumber.invalid" defaultMessage="Mobile number is Invalid" />;
+	        }
+	    }
 
-	    
+        if (password !== "undefined") {
+	        if (password.match(/(?=^.{8,24}$)(?=.*\d)(?=.*[a-z])(?!.*\s)[0-9a-zA-Z!@#$%^&*()]*$/)) {
+	          formIsValid = true;
+	          //errors["password"] = <FormattedMessage id="register.validation.password.invalid" defaultMessage="Password must be atleast 8  and 24 characters long" />;
+	        }
+	        else
+	        	formIsValid = false;
+	      }
 
- //        if (typeof fields["password"] !== "undefined") {
-	//         if (!fields["password"].match(/[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{8,24}$/)) {
-	//           formIsValid = false;
-	//           errors["password"] = <FormattedMessage id="register.validation.password.invalid" defaultMessage="Password must be atleast 8  and 24 characters long" />;
-	//         }
-	//       }
+	    if (confirmPassword !== password ) {
+	      formIsValid = false;
+	      errors["confirmPassword"] = <FormattedMessage id="register.validation.confirmPassword.empty" defaultMessage="Passwords not matched" />;
+	    }
 
-	//     if (typeof fields["confirmPassword"] !== typeof fields["password"] ) {
-	//       formIsValid = false;
-	//       errors["confirmPassword"] = <FormattedMessage id="register.validation.confirmPassword.empty" defaultMessage="Passwords not matched" />;
-	//     }
-
-	//   this.setState({ errors: errors });
- //      return formIsValid;
-	// }
+	  this.setState({ errors: errors });
+      return formIsValid;
+	}
 
 	registerUser = () => {
 	    let quest_quote = "";
@@ -147,7 +153,6 @@ class RegisterForm extends Component {
 					<Col md="12" className="text-align-left">
 						
         				<AvForm onValidSubmit={this.handleSubmit}>
-        
 							<Row>
 								<Col md="6">
 									<Row>
@@ -221,6 +226,7 @@ class RegisterForm extends Component {
 									                          maxlength: { value: 24, errorMessage: <FormattedMessage id="register.validation.password.invalid" defaultMessage="Password must be atleast 8 and 24 characters long" /> }
 									                        }}
                                                         />
+                                                        <span id="password-message-display" className="invalid-feedback"><FormattedMessage id="register.validation.password.invalid" defaultMessage="Password must be 8 and 24 characters long and must contain letters and numbers" /></span>
                                                     </FormGroup>
 
                                                     <FormGroup>
@@ -228,7 +234,7 @@ class RegisterForm extends Component {
                                                         <AvField type="password" name="confirmPassword" id="registerConfirmPassword" value={this.state.confirmPassword} onChange={this.onChangeCredintials} onKeyUp={this.cpasswordKeyPress}
                                                         validate={{
 									                          required: { value: true, errorMessage: <FormattedMessage id="register.validation.password.empty" defaultMessage="Confirm Password cannot be empty" /> },
-									                          pattern: { value: /[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]$/, errorMessage: <FormattedMessage id="register.validation.password.invalid" defaultMessage="Passwords not matched" /> }
+									                          pattern: { value: /[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]$/, errorMessage: <FormattedMessage id="register.validation.password.notMatched" defaultMessage="Passwords not matched" /> }
 									                        }}
                                                         />
                                                         <span id="message-display" className="invalid-feedback"><FormattedMessage id="register.validation.password.notMatched" defaultMessage="Passwords not matched" /></span>

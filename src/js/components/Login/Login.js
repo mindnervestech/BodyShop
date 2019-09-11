@@ -13,6 +13,7 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      errMsg: false,
       signUpState: 'login'
     }
   }
@@ -35,12 +36,24 @@ class Login extends Component {
 
   register = (data) => {
     const payload = data;
-      this.props.onRegisterUserUser(payload);
+    this.props.onRegisterUserUser(payload);
+    this.setState({
+        errMsg : true
+    })
+    
   }
 
   render() {
-    return (
-            <div className="text-align-center login paddingTopCustom">
+
+    
+    return (<div className="paddingTopCustom">
+              
+              <span className="error-message">
+
+              { (this.props.registerUserDetails.status == false && this.state.errMsgj ? this.props.registerUserDetails.message : '') }
+              
+              </span>
+              <div className="text-align-center login ">
                 <div className="display-inline login-container">
                     <div className="header4 title-size signup-title">
                         <span><FormattedMessage id="login.Title" defaultMessage="LOGIN OR REGISTER" /></span>
@@ -70,6 +83,7 @@ class Login extends Component {
                     </div>
                 </div>
             </div>
+          </div>
       );
   }
 }
@@ -80,6 +94,7 @@ const mapStateToProps = state => {
     customer_details: state.customer_details,
     login_error: state.invalidLogin,
     globals: state.global,
+    registerUserDetails : state.login.registerUserDetails
   };
 }
 
